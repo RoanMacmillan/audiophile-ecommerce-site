@@ -1,0 +1,143 @@
+main {
+}
+
+main h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.orangeCard,
+.grayCard,
+.darkCard,
+.lightCard {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+main span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+
+.textContainer p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  margin-top: 1.5rem;
+  width: 328px;
+  margin-bottom: 28px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+  background: #000000;
+  padding-top: 108px;
+  padding-bottom: 112px;
+}
+
+.orangeImgWrapper {
+  width: 172.25px;
+  margin-top: 55px;
+  height: 207px;
+}
+
+.orangeCard img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.orangeCard {
+  height: 600px;
+  background: #d87d4a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.orangeCard h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 32px;
+}
+
+.orangeCard p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  margin-top: 24px;
+  max-width: 349px;
+  padding-left: 23px;
+  padding-right: 24px;
+}
+
+.circle {
+  position: absolute;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.267);
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  top: -4px;
+}
+
+.circle:nth-of-type(2) {
+  width: 279px;
+  height: 279px;
+  top: 19px;
+}
+
+.circle:nth-of-type(3) {
+  width: 558px;
+  height: 558px;
+  top: -119px;
+}
+
+.grayCard {
+  height: 320px;
+  background-image: url("../../images/home/mobile/image-speaker-zx7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.darkCard {
+  height: 200px;
+  background-image: url("../../images/home/mobile/image-earphones-yx1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
