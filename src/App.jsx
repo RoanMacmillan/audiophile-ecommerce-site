@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Headphones from './assets/components/ProductIndexes/Headphones/Headphones'
 import Speakers from './assets/components/ProductIndexes/Speakers/Speakers'
 import Earphones from "./assets/components/ProductIndexes/Earphones/Earphones";
+import ScrollToTop from "./assets/components/ScrollToTop/ScrollToTop";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <ScrollToTop />
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
