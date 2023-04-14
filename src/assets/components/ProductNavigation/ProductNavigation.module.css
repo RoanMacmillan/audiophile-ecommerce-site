@@ -53,6 +53,12 @@
   color: #000000;
   mix-blend-mode: normal;
   opacity: 0.5;
+  text-decoration: none;
+}
+
+.card a:hover {
+
+  text-decoration: underline;
 }
 
 .shopContainer {
