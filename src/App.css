@@ -13,11 +13,9 @@
   margin: 0;
   padding: 0;
   font-family: "Manrope", sans-serif;
-  
 }
 
 h1 {
-
   color: white;
   text-transform: uppercase;
 }
@@ -34,9 +32,7 @@ html {
 }
 
 body {
-
   min-height: 100vh;
-
 }
 
 /* responsive images/videos */
@@ -48,8 +44,9 @@ video {
   max-width: 100%;
 }
 
+/* button styles  */
+
 .btn {
-  background: #d87d4a;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
@@ -57,7 +54,6 @@ video {
   line-height: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #ffffff;
   width: 10rem;
   height: 48px;
   display: flex;
@@ -66,7 +62,38 @@ video {
   cursor: pointer;
 }
 
-.black {
-  background: #000000 !important;
-  margin-top: 24px;
+.orange {
+  background: #d87d4a;
+  color: #ffffff;
+  transition: all .2s ease;
 }
+
+.orange:hover {
+  background: #e69364;
+}
+
+.black {
+  background: #000000;
+  margin-top: 24px;
+  color: #ffffff;
+  transition: all .2s ease;
+}
+
+.black:hover {
+ background: #3b3a3a;
+}
+
+.light {
+  color: #000000;
+  background: transparent;
+  margin-top: 2rem !important;
+  border: 1px solid #000000;
+  transition: all .2s ease;
+}
+
+.light:hover {
+  background: #000000;
+  color: white;
+}
+
+/* ------ */

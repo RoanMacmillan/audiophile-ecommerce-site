@@ -29,7 +29,7 @@
   width: 180px;
 }
 
-.card img {
+.card img:first-child {
   margin-top: -52px;
 }
 
@@ -53,16 +53,25 @@
   color: #000000;
   mix-blend-mode: normal;
   opacity: 0.5;
+}
+
+.shopContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  gap: 13.32px;
+}
 
+.shopContainer img {
+  margin-right: auto;
 }
 
 .cardTextContainer {
-
-    width: 100%;
-    position: absolute;
-    bottom: 22px;
-    display: flex;
-    flex-direction:column ;
+  width: 100%;
+  position: absolute;
+  bottom: 22px;
+  display: flex;
+  flex-direction: column;
 }
