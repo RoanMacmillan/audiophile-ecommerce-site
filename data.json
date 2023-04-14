@@ -4,15 +4,15 @@
     "slug": "yx1-earphones",
     "name": "YX1 Wireless Earphones",
     "image": {
-      "mobile": "./assets/product-yx1-earphones/mobile/image-product.jpg",
-      "tablet": "./assets/product-yx1-earphones/tablet/image-product.jpg",
-      "desktop": "./assets/product-yx1-earphones/desktop/image-product.jpg"
+      "mobile": "./assets/images/product-yx1-earphones/mobile/image-product.jpg",
+      "tablet": "./assets/images/product-yx1-earphones/tablet/image-product.jpg",
+      "desktop": "./assets/images/product-yx1-earphones/desktop/image-product.jpg"
     },
     "category": "earphones",
     "categoryImage": {
-      "mobile": "./assets/product-yx1-earphones/mobile/image-category-page-preview.jpg",
-      "tablet": "./assets/product-yx1-earphones/tablet/image-category-page-preview.jpg",
-      "desktop": "./assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
+      "mobile": "./assets/images/product-yx1-earphones/mobile/image-category-page-preview.jpg",
+      "tablet": "./assets/images/product-yx1-earphones/tablet/image-category-page-preview.jpg",
+      "desktop": "./assets/images/product-yx1-earphones/desktop/image-category-page-preview.jpg"
     },
     "new": true,
     "price": 599,
@@ -348,15 +348,15 @@
     "slug": "zx7-speaker",
     "name": "ZX7 Speaker",
     "image": {
-      "mobile": "./assets/product-zx7-speaker/mobile/image-product.jpg",
-      "tablet": "./assets/product-zx7-speaker/tablet/image-product.jpg",
-      "desktop": "./assets/product-zx7-speaker/desktop/image-product.jpg"
+      "mobile": "./assets/images/product-zx7-speaker/mobile/image-product.jpg",
+      "tablet": "./assets/images/product-zx7-speaker/tablet/image-product.jpg",
+      "desktop": "./assets/images/product-zx7-speaker/desktop/image-product.jpg"
     },
     "category": "speakers",
     "categoryImage": {
-      "mobile": "./assets/product-zx7-speaker/mobile/image-category-page-preview.jpg",
-      "tablet": "./assets/product-zx7-speaker/tablet/image-category-page-preview.jpg",
-      "desktop": "./assets/product-zx7-speaker/desktop/image-category-page-preview.jpg"
+      "mobile": "./assets/images/product-zx7-speaker/mobile/image-category-page-preview.jpg",
+      "tablet": "./assets/images/product-zx7-speaker/tablet/image-category-page-preview.jpg",
+      "desktop": "./assets/images/product-zx7-speaker/desktop/image-category-page-preview.jpg"
     },
     "new": false,
     "price": 3500,
@@ -436,15 +436,15 @@
     "slug": "zx9-speaker",
     "name": "ZX9 Speaker",
     "image": {
-      "mobile": "./assets/product-zx9-speaker/mobile/image-product.jpg",
-      "tablet": "./assets/product-zx9-speaker/tablet/image-product.jpg",
-      "desktop": "./assets/product-zx9-speaker/desktop/image-product.jpg"
+      "mobile": "./assets/images/product-zx9-speaker/mobile/image-product.jpg",
+      "tablet": "./assets/images/product-zx9-speaker/tablet/image-product.jpg",
+      "desktop": "./assets/images/product-zx9-speaker/desktop/image-product.jpg"
     },
     "category": "speakers",
     "categoryImage": {
-      "mobile": "./assets/product-zx9-speaker/mobile/image-category-page-preview.jpg",
-      "tablet": "./assets/product-zx9-speaker/tablet/image-category-page-preview.jpg",
-      "desktop": "./assets/product-zx9-speaker/desktop/image-category-page-preview.jpg"
+      "mobile": "./assets/images/product-zx9-speaker/mobile/image-category-page-preview.jpg",
+      "tablet": "./assets/images/product-zx9-speaker/tablet/image-category-page-preview.jpg",
+      "desktop": "./assets/images/product-zx9-speaker/desktop/image-category-page-preview.jpg"
     },
     "new": true,
     "price": 4500,

@@ -66,7 +66,7 @@ video {
 .orange {
   background: #d87d4a;
   color: #ffffff;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .orange:hover {
@@ -77,11 +77,11 @@ video {
   background: #000000;
   margin-top: 24px;
   color: #ffffff;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .black:hover {
- background: #3b3a3a;
+  background: #3b3a3a;
 }
 
 .light {
@@ -89,7 +89,7 @@ video {
   background: transparent;
   margin-top: 2rem !important;
   border: 1px solid #000000;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .light:hover {
@@ -98,3 +98,24 @@ video {
 }
 
 /* ------ */
+
+/* product index header  */
+
+.indexHeader h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.indexHeader {
+  background: #000000;
+  height: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
