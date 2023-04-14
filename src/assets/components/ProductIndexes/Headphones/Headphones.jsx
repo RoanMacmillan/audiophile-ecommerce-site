@@ -1,10 +1,17 @@
 import React from 'react';
 import HeadphoneItem from './HeadphoneItem/HeadphoneItem'
 import headphonesData from '../../../../../data.json';
+import styles from './Headphones.module.css';
+import ProductNavigation from '../../ProductNavigation/ProductNavigation'
 
 const Headphones = () => {
   return (
-    <div>
+    <div className={styles.headphonesIndex}>
+      <div className={styles.itemTitle}>
+      
+      <h1>headphones</h1>
+
+      </div>
       {headphonesData
         .filter((item) => item.category === 'headphones')
         .reverse()
@@ -17,6 +24,7 @@ const Headphones = () => {
             description={headphone.description}
           />
         ))}
+        <ProductNavigation />
     </div>
   );
 };

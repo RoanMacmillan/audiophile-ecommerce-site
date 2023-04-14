@@ -1,11 +1,11 @@
-
 .headphoneItem {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 7.5rem;
 }
-
 
 .headphoneItem span {
   font-weight: 400;
@@ -15,7 +15,7 @@
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #d87d4a;
-  
+  margin-top: 1.5rem;
 }
 
 .headphoneItem h3 {
@@ -26,6 +26,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #000000;
+  margin-top: 1.5rem;
 }
 
 .headphoneItem p {
@@ -37,5 +38,7 @@
   mix-blend-mode: normal;
   opacity: 0.5;
   max-width: 327px;
-  
+  margin: 1.5rem 0px;
 }
+
+
