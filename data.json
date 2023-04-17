@@ -4,9 +4,9 @@
     "slug": "yx1-earphones",
     "name": "YX1 Wireless Earphones",
     "image": {
-      "mobile": "./assets/images/product-yx1-earphones/mobile/image-product.jpg",
-      "tablet": "./assets/images/product-yx1-earphones/tablet/image-product.jpg",
-      "desktop": "./assets/images/product-yx1-earphones/desktop/image-product.jpg"
+      "mobile": "/assets/images/product-yx1-earphones/mobile/image-product.jpg",
+      "tablet": "/assets/images/product-yx1-earphones/tablet/image-product.jpg",
+      "desktop": "/assets/images/product-yx1-earphones/desktop/image-product.jpg"
     },
     "category": "earphones",
     "categoryImage": {
@@ -318,9 +318,9 @@
         "slug": "xx99-mark-one-headphones",
         "name": "XX99 Mark I",
         "image": {
-          "mobile": "/assets/shared/mobile/image-xx99-mark-one-headphones.jpg",
-          "tablet": "/assets/shared/tablet/image-xx99-mark-one-headphones.jpg",
-          "desktop": "/assets/shared/desktop/image-xx99-mark-one-headphones.jpg"
+          "mobile": "/assets/images/shared/mobile/image-xx99-mark-one-headphones.jpg",
+          "tablet": "/assets/images/shared/tablet/image-xx99-mark-one-headphones.jpg",
+          "desktop": "/assets/images/shared/desktop/image-xx99-mark-one-headphones.jpg"
         }
       },
       {
@@ -348,9 +348,9 @@
     "slug": "zx7-speaker",
     "name": "ZX7 Speaker",
     "image": {
-      "mobile": "./assets/images/product-zx7-speaker/mobile/image-product.jpg",
-      "tablet": "./assets/images/product-zx7-speaker/tablet/image-product.jpg",
-      "desktop": "./assets/images/product-zx7-speaker/desktop/image-product.jpg"
+      "mobile": "/assets/images/product-zx7-speaker/mobile/image-product.jpg",
+      "tablet": "/assets/images/product-zx7-speaker/tablet/image-product.jpg",
+      "desktop": "/assets/images/product-zx7-speaker/desktop/image-product.jpg"
     },
     "category": "speakers",
     "categoryImage": {
@@ -436,9 +436,9 @@
     "slug": "zx9-speaker",
     "name": "ZX9 Speaker",
     "image": {
-      "mobile": "./assets/images/product-zx9-speaker/mobile/image-product.jpg",
-      "tablet": "./assets/images/product-zx9-speaker/tablet/image-product.jpg",
-      "desktop": "./assets/images/product-zx9-speaker/desktop/image-product.jpg"
+      "mobile": "/assets/images/product-zx9-speaker/mobile/image-product.jpg",
+      "tablet": "/assets/images/product-zx9-speaker/tablet/image-product.jpg",
+      "desktop": "/assets/images/product-zx9-speaker/desktop/image-product.jpg"
     },
     "category": "speakers",
     "categoryImage": {

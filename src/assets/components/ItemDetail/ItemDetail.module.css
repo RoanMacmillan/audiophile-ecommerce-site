@@ -103,7 +103,7 @@
   opacity: 0.5;
 }
 
-li {
+.itemDetail li {
   display:flex;
   justify-content: flex-start;
   flex-direction: row;

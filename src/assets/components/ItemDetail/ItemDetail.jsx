@@ -18,7 +18,7 @@ const ItemDetail = ({ getProductBySlug }) => {
     return <p>Product not found</p>;
   }
 
-  const { image, name, description, features, includes, gallery, price, others } = product;
+  const { image, name, description, features, includes, gallery, price, others, category } = product;
 
   
 
@@ -63,7 +63,7 @@ const ItemDetail = ({ getProductBySlug }) => {
         ))}
       </div>
     </div>
-    <RelatedProducts relatedProducts={others} />
+    <RelatedProducts relatedProducts={others} category={category} />
 
           <ProductNavigation />
 </div>

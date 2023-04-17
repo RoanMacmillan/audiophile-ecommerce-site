@@ -1,0 +1,49 @@
+.relatedProducts a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.relatedProducts {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.relatedProducts ul {
+  list-style-type: none;
+}
+
+.relatedProducts li {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.relatedProducts h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.relatedProducts h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}

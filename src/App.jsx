@@ -31,6 +31,10 @@ function App() {
             path="/headphones/:slug"
             element={<ItemDetail getProductBySlug={getProductBySlug} />}
           />
+          <Route
+            path="/speakers/:slug"
+            element={<ItemDetail getProductBySlug={getProductBySlug} />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

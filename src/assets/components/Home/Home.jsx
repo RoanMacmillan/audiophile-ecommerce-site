@@ -4,8 +4,8 @@ import mobileHeader from "../../images/home/mobile/image-header.jpg";
 import Button from "../Button/Button";
 import ProductNavigation from "../ProductNavigation/ProductNavigation";
 import zx9Img from "../../images/home/mobile/image-speaker-zx9.png";
-
-
+import { Link } from "react-router-dom";
+ 
 const Home = () => {
   return (
     <main>
@@ -18,7 +18,9 @@ const Home = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
+        <Link to='/headphones/xx99-mark-two-headphones'>
         <Button className="btn orange" />
+        </Link>
       </div>
 
       <ProductNavigation />

@@ -171,3 +171,6 @@ main span {
   padding-top: 101px;
 }
 
+.textContainer a {
+  text-decoration: none;
+}
