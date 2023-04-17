@@ -8,9 +8,14 @@ import Headphones from './assets/components/ProductIndexes/Headphones/Headphones
 import Speakers from './assets/components/ProductIndexes/Speakers/Speakers'
 import Earphones from "./assets/components/ProductIndexes/Earphones/Earphones";
 import ScrollToTop from "./assets/components/ScrollToTop/ScrollToTop";
+import headphonesData from '../data.json';
+import ItemDetail from "./assets/components/ItemDetail/ItemDetail";
 
 function App() {
-  const [count, setCount] = useState(0);
+
+  const getProductBySlug = (slug) => {
+    return headphonesData.find((product) => product.slug === slug);
+  };
 
   return (
     <div className="App">
@@ -22,6 +27,10 @@ function App() {
           <Route path="/headphones" element={<Headphones />} />
            <Route path="/speakers" element={<Speakers />} />
           <Route path="/earphones" element={<Earphones />} /> 
+          <Route
+            path="/headphones/:slug"
+            element={<ItemDetail getProductBySlug={getProductBySlug} />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

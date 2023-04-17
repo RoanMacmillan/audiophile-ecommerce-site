@@ -1,7 +1,7 @@
-import React from 'react';
-import ProductItem from './ProductItem/ProductItem';
-import headphonesData from '../../../../../data.json';
-import ProductNavigation from '../../ProductNavigation/ProductNavigation';
+import React from "react";
+import ProductItem from "./ProductItem/ProductItem";
+import headphonesData from "../../../../../data.json";
+import ProductNavigation from "../../ProductNavigation/ProductNavigation";
 
 const Product = ({ category }) => {
   return (
@@ -18,9 +18,11 @@ const Product = ({ category }) => {
             isNew={product.new}
             name={product.name}
             description={product.description}
+            slug={product.slug}
+            category={product.category}
           />
         ))}
-        <ProductNavigation />
+      <ProductNavigation />
     </div>
   );
 };

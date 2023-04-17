@@ -1,0 +1,25 @@
+.itemDetail h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.itemDetail p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.itemDetail h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+}
