@@ -3,6 +3,7 @@ import styles from "./ItemDetail.module.css";
 import { useParams, useNavigate } from "react-router-dom";
 import ProductNavigation from "../ProductNavigation/ProductNavigation.jsx";
 import RelatedProducts from "./RelatedProducts/RelatedProducts";
+import Gallery from "./Gallery/Gallery";
 
 const ItemDetail = ({ getProductBySlug }) => {
   const navigate = useNavigate();
@@ -79,16 +80,8 @@ const ItemDetail = ({ getProductBySlug }) => {
             ))}
           </ul>
         </div>
-        {/* Add more elements to display gallery images and other details */}
-        <div className={styles.gallery}>
-          {Object.values(gallery).map((imageSet, index) => (
-            <picture key={index}>
-              <source media="(min-width: 1024px)" srcSet={imageSet.desktop} />
-              <source media="(min-width: 768px)" srcSet={imageSet.tablet} />
-              <img src={imageSet.mobile} alt={`Gallery Image ${index + 1}`} />
-            </picture>
-          ))}
-        </div>
+
+        <Gallery gallery={gallery} />
       </div>
       <RelatedProducts relatedProducts={others} category={category} />
 

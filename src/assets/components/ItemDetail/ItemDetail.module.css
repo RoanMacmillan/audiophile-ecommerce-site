@@ -60,16 +60,7 @@
   list-style-type: none;
 }
 
-.gallery {
-  margin-top: 5.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
 
-.gallery img {
-  border-radius: 8px;
-}
 
 .price {
   font-weight: 700;
