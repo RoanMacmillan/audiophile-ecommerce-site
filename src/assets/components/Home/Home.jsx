@@ -4,8 +4,10 @@ import mobileHeader from "../../images/home/mobile/image-header.jpg";
 import Button from "../Button/Button";
 import ProductNavigation from "../ProductNavigation/ProductNavigation";
 import zx9Img from "../../images/home/mobile/image-speaker-zx9.png";
+import zx9Tablet from "../../images/home/tablet/image-speaker-zx9.png";
+
 import { Link } from "react-router-dom";
- 
+
 const Home = () => {
   return (
     <main>
@@ -18,8 +20,8 @@ const Home = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <Link to='/headphones/xx99-mark-two-headphones'>
-        <Button className="btn orange" />
+        <Link to="/headphones/xx99-mark-two-headphones">
+          <Button className="btn orange" />
         </Link>
       </div>
 
@@ -31,7 +33,9 @@ const Home = () => {
         <div className={styles.circle}></div>
 
         <div className={styles.orangeImgWrapper}>
-          <img src={zx9Img} alt="zx9 image"></img>
+          <img className={styles.zx9Mobile} src={zx9Img} alt="zx9 image"></img>
+          <img className={styles.zx9Tablet} src={zx9Tablet} alt="zx9 image"></img>
+
         </div>
 
         <h2>
@@ -42,20 +46,28 @@ const Home = () => {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-
-        <Button className="btn black" />
+        <Link to="/speakers/zx9-speaker/">
+          <Button className="btn black" />
+        </Link>
       </div>
 
       <div className={styles.grayCard}>
         <h2>zx7 speaker</h2>
-        <Button className="btn light" />
+        <Link to="/speakers/zx7-speaker/">
+          <Button className="btn light" />
+        </Link>
       </div>
+
+      <div className={styles.earphoneContainer}>
 
       <div className={styles.darkCard}></div>
 
       <div className={styles.lightCard}>
         <h2>yx1 earphones</h2>
-        <Button className="btn light" />
+        <Link to="/earphones/yx1-earphones/">
+          <Button className="btn light" />
+        </Link>
+      </div>
       </div>
     </main>
   );

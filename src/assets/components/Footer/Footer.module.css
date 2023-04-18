@@ -57,7 +57,6 @@ footer a {
 }
 
 footer a:hover {
-
   color: rgba(216, 125, 74, 1);
 }
 
@@ -106,6 +105,36 @@ footer p:last-of-type {
 }
 
 .iconContainer img:hover {
-    filter: invert(34%) sepia(54%) saturate(1547%) hue-rotate(324deg) brightness(72%) contrast(90%);
-    cursor: pointer;
+  filter: invert(34%) sepia(54%) saturate(1547%) hue-rotate(324deg)
+    brightness(72%) contrast(90%);
+  cursor: pointer;
+}
+
+.bestGearTablet {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .bestGearTablet {
+    display: unset;
+    border-radius: 8px;
+  }
+
+  .bestGear {
+    display: none;
+  }
+
+  .personContainer {
+    padding-left: 39px;
+    padding-right: 40px;
+  }
+
+  .personContainer h3 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.42857px;
+    width: 573px;
+    margin-lefT: auto;
+    margin-right: auto;
+  }
 }

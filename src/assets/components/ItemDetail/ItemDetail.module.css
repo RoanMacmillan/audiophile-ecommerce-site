@@ -51,6 +51,7 @@
 
 .mobileImage {
   margin-top: 24px;
+  margin-bottom: 32px;
   border-radius: 8px;
 }
 
@@ -89,6 +90,10 @@
   line-height: 25px;
   color: #d87d4a;
   /* margin-right: 1.5rem; */
+  flex-shrink: 0;
+  width: 15px;
+  text-align: left;
+  margin-right: 1.5rem;
 }
 
 .listItem {
@@ -98,13 +103,31 @@
   /* identical to box height, or 167% */
 
   color: #000000;
-  
+
   mix-blend-mode: normal;
   opacity: 0.5;
 }
 
-.itemDetail li {
-  display:flex;
+.listItemContainer {
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
-  flex-direction: row;
+}
+
+.ul li {
+  margin-bottom: 8px;
+}
+
+.ul li:last-of-type {
+  margin-bottom: 0px !important;
+}
+
+.newLabel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  
+  color: #d87d4a;
 }

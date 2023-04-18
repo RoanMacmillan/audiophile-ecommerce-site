@@ -29,11 +29,11 @@ function App() {
           <Route path="/earphones" element={<Earphones />} /> 
           <Route
             path="/headphones/:slug"
-            element={<ItemDetail getProductBySlug={getProductBySlug} />}
+            element={<ItemDetail getProductBySlug={getProductBySlug}  />}
           />
           <Route
             path="/speakers/:slug"
-            element={<ItemDetail getProductBySlug={getProductBySlug} />}
+            element={<ItemDetail getProductBySlug={getProductBySlug}  />}
           />
         </Routes>
         <Footer />

@@ -18,7 +18,7 @@ const ItemDetail = ({ getProductBySlug }) => {
     return <p>Product not found</p>;
   }
 
-  const { image, name, description, features, includes, gallery, price, others, category } = product;
+  const { image, name, description, features, includes, gallery, price, others, category, new: isNew } = product;
 
   
 
@@ -34,6 +34,7 @@ const ItemDetail = ({ getProductBySlug }) => {
         src={image.mobile}
         alt={`${name} mobile`}
       />
+      {isNew && <span className={styles.newLabel}>New product</span>}
       {/* <img className={styles.tabletImage} src={image.tablet} alt={`${name} tablet`} />
 <img className={styles.desktopImage} src={image.desktop} alt={`${name} desktop`} /> */}
       <h2>{name}</h2>
@@ -44,14 +45,16 @@ const ItemDetail = ({ getProductBySlug }) => {
         <p key={index}>{features}</p>
       ))}
       <h3>In the box</h3>
-      <ul>
-        {includes.map((item, index) => (
-            
-          <li key={index}>
-            <span className={styles.listStyle}>{item.quantity}x</span> <span className={styles.listItem}>{item.item}</span>
-          </li>
-        ))}
-      </ul>
+      <ul className={styles.ul}>
+  {includes.map((item, index) => (
+    <li key={index}>
+      <div className={styles.listItemContainer}>
+        <span className={styles.listStyle}>{item.quantity}x</span>
+        <span className={styles.listItem}>{item.item}</span>
+      </div>
+    </li>
+  ))}
+</ul>
       {/* Add more elements to display gallery images and other details */}
       <div className={styles.gallery}>
         {Object.values(gallery).map((imageSet, index) => (

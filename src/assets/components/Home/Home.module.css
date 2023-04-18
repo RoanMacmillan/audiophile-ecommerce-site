@@ -1,4 +1,5 @@
-main {
+main a {
+  text-decoration: none;
 }
 
 main h1 {
@@ -55,7 +56,7 @@ main span {
   background: #000000e3;
   padding-top: 108px;
   padding-bottom: 112px;
-  background-image: url('../../images/home/mobile/image-header.jpg');
+  background-image: url("../../images/home/mobile/image-header.jpg");
   background-repeat: no-repeat;
   background-size: 375px;
   overflow: hidden;
@@ -173,4 +174,83 @@ main span {
 
 .textContainer a {
   text-decoration: none;
+}
+.zx9Tablet {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .orangeCard,
+  .grayCard,
+  .darkCard,
+  .lightCard {
+    margin-left: 2.4375rem;
+    margin-right: 2.5rem;
+  }
+
+  .orangeCard {
+    height: 720px;
+    margin-bottom: 32px;
+
+  }
+
+  .orangeCard h2 {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+    margin-top: 64px;
+  }
+
+  .orangeCard p {
+    width: 349px;
+    padding: 0;
+  }
+
+  .grayCard {
+    height: 320px;
+    background-image: url("../../images/home/tablet/image-speaker-zx7.jpg");
+    padding-left: 62px;
+    margin-bottom: 32px;
+  }
+
+  .zx9Mobile {
+    display: none;
+  }
+
+  .zx9Tablet {
+    display: unset;
+  }
+
+  .orangeImgWrapper {
+    width: 183px;
+    height: 221px;
+  }
+
+  .earphoneContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2.4375rem;
+    margin-right: 2.5rem;
+    gap: 11px;
+      
+  }
+
+  .darkCard {
+    width: 50%;
+    height: 320px;
+    background-image: url("../../images/home/tablet/image-earphones-yx1.jpg");
+    margin: 0;
+
+  }
+
+  .lightCard {
+    height: 320px;
+    width: 50%;
+    margin: 0;
+    padding-left: 41px;
+  }
+
+  .lightCard h2 {
+    padding-top: 101px;
+  }
 }

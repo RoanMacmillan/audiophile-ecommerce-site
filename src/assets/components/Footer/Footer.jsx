@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import bestGear from "../../images/shared/mobile/image-best-gear.jpg";
+import bestGearTablet from "../../images/shared/tablet/image-best-gear.jpg";
+
 import logo from "../../images/icons/logo.svg";
 import facebook from "../../images/icons/icon-facebook.svg";
 import insta from "../../images/icons/icon-instagram.svg";
@@ -12,6 +14,8 @@ const Footer = () => {
     <div className={styles.bottomSection}>
       <div className={styles.personContainer}>
         <img src={bestGear} alt="Person" className={styles.bestGear}></img>
+        <img src={bestGearTablet} alt="Person" className={styles.bestGearTablet}></img>
+
 
         <h3>
           Bringing you the <span>best</span> audio gear
