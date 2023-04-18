@@ -46,11 +46,14 @@ const Footer = () => {
           helping you get the most out of personal audio. Come and visit our
           demo facility - we’re open 7 days a week.
         </p>
+        <div className={styles.bottomRow}>
         <p>Copyright 2023. All Rights Reserved</p>
         <div className={styles.iconContainer}>
           <img src={facebook} alt="Facebook Link"></img>
           <img src={twitter} alt="Twitter Link"></img>
           <img src={insta} alt="Instagram Link"></img>
+          
+        </div>
         </div>
       </footer>
     </div>

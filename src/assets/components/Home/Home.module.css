@@ -1,5 +1,6 @@
 main a {
   text-decoration: none;
+  z-index: 500;
 }
 
 main h1 {
@@ -22,7 +23,7 @@ main h1 {
   margin-bottom: 24px;
 }
 
-main span {
+.textContainer span {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
@@ -61,6 +62,7 @@ main span {
   background-size: 375px;
   overflow: hidden;
   background-position: bottom;
+  
 }
 
 .orangeImgWrapper {
@@ -191,7 +193,6 @@ main span {
   .orangeCard {
     height: 720px;
     margin-bottom: 32px;
-
   }
 
   .orangeCard h2 {
@@ -232,7 +233,6 @@ main span {
     margin-left: 2.4375rem;
     margin-right: 2.5rem;
     gap: 11px;
-      
   }
 
   .darkCard {
@@ -240,7 +240,6 @@ main span {
     height: 320px;
     background-image: url("../../images/home/tablet/image-earphones-yx1.jpg");
     margin: 0;
-
   }
 
   .lightCard {
@@ -253,4 +252,44 @@ main span {
   .lightCard h2 {
     padding-top: 101px;
   }
+
+  .textContainer p {
+    margin-top: 1.5rem;
+    width: 349px;
+    margin-bottom: 40px;
+  }
+
+  main h1 {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+    z-index: 1000;
+  }
+
+  .textContainer span {
+    margin-bottom: 24px;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    background: #000000e3;
+    padding-top: 108px;
+    padding-bottom: 112px;
+    background-image: url("../../images/home/tablet/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px;
+    overflow: hidden;
+    background-position-x:center;
+    background-position-y: -120px;
+    height: 639px;
+    position: relative;
+    z-index: 5;
+
+  }
+
+
+  
 }

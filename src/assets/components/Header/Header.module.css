@@ -10,3 +10,17 @@ header {
 .hamburger {
   filter: brightness(0) invert(1);
 }
+
+@media screen and (min-width: 768px) {
+
+
+  .logoA {
+    margin-right: auto;
+    margin-left: 42px;
+  }
+
+  header {
+    padding-left: 39px;
+    padding-right: 40px;
+  }
+}

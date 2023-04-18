@@ -13,7 +13,7 @@ const Header = () => {
         src={hamburger}
         alt="Hamburger icon"
       ></img>
-      <Link to="/">
+      <Link to="/" className={styles.logoA}>
         <img className={styles.logo} src={logo} alt="Logo"></img>
       </Link>
       <img className={styles.cart} src={cart} alt="Cart"></img>

@@ -133,8 +133,42 @@ footer p:last-of-type {
     font-size: 40px;
     line-height: 44px;
     letter-spacing: 1.42857px;
-    width: 573px;
-    margin-lefT: auto;
-    margin-right: auto;
+    padding-left: 58px;
+    padding-right: 58px;
+    margin-top: 43px;
+  }
+
+  .personContainer p {
+  
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+
+  footer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-left: 39px;
+    padding-right: 40px;
+    height: 400px;
+    
+  }
+
+  .linksContainer {
+    flex-direction: row;
+    gap: 34px;
+  }
+
+  footer p {
+    text-align: left;
+    heighT: unset;
+    width: unset;
+    max-width: unset;
+  }
+
+  .bottomRow {
+    display: flex;
+    justify-content: space-between;
+    widtH: 100%;
   }
 }

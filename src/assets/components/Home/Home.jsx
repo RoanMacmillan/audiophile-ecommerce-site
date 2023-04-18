@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Home.module.css";
-import mobileHeader from "../../images/home/mobile/image-header.jpg";
+import tabletHeader from "../../images/home/tablet/image-header.jpg";
 import Button from "../Button/Button";
 import ProductNavigation from "../ProductNavigation/ProductNavigation";
 import zx9Img from "../../images/home/mobile/image-speaker-zx9.png";
@@ -12,6 +12,11 @@ const Home = () => {
   return (
     <main>
       <div className={styles.textContainer}>
+        {/* <div className={styles.bgContainer}>
+
+        <img src={tabletHeader}></img>
+
+        </div> */}
         <span>new product</span>
         <h1>
           xx99 mark ii<br></br>headphones
