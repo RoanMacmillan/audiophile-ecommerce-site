@@ -13,8 +13,8 @@ const Product = ({ category }) => {
           <ProductItem
             key={product.id}
             image={product.categoryImage.mobile}
-            // tabletImage={product.categoryImage.tablet}
-            // desktopImage={product.categoryImage.desktop}
+            tabletImage={product.categoryImage.tablet}
+            desktopImage={product.categoryImage.desktop}
             isNew={product.new}
             name={product.name}
             description={product.description}

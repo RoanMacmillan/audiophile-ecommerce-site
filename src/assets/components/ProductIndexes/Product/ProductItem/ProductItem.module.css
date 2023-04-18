@@ -44,3 +44,45 @@
 .productItem a {
   text-decoration: none;
 }
+
+.tabletImg {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobileImg {
+    display: none;
+  }
+
+  .tabletImg {
+    display: unset;
+  }
+
+  .productItem {
+    padding-right: 40px;
+    padding-left: 39px;
+  }
+
+  .productItem span {
+    margin-top: 52px;
+  }
+
+  .productItem h3 {
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 1.42857px;
+    width: 300px;
+    
+  }
+
+  .productItem p {
+  
+    margin-top: 2rem;
+    max-width: 572px;
+  }
+
+  .marginTopForNonNewProduct {
+    padding-top: 28px;
+  }
+}
