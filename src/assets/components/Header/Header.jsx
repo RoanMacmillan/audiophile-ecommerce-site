@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
+      <div className={styles.headerWrapper}>
+        <div className={styles.headerLine}></div>
       <img
         className={styles.hamburger}
         src={hamburger}
@@ -17,6 +19,7 @@ const Header = () => {
         <img className={styles.logo} src={logo} alt="Logo"></img>
       </Link>
       <img className={styles.cart} src={cart} alt="Cart"></img>
+      </div>
     </header>
   );
 };

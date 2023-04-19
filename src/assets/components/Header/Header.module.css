@@ -1,10 +1,23 @@
 header {
-  background: #000000;
+  background: #0E0E0E;  
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 1.5rem;
+  
   outline: 1px solid rgba(255, 255, 255, .1);
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+
+.headerLine {
+  display: none;
 }
 
 .hamburger {
@@ -22,5 +35,41 @@ header {
   header {
     padding-left: 39px;
     padding-right: 40px;
+    padding-top: 35px;
+    padding-bottom: 36px;
+    
+
+  }
+
+
+  .headerWrapper {
+    max-width: 1109.83px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+  .headerLine {
+
+
+    height: 1px;
+    position: absolute;
+    background: red;
+    display: unset;
+    width: 100%;
+    bottom: -36px;
+    background: #FFFFFF;
+mix-blend-mode: normal;
+opacity: 0.2;
+  }
+
+
+  .headerWrapper {
+    position: relative;
   }
 }
