@@ -5,9 +5,9 @@ import logo from "../../images/icons/logo.svg";
 import cart from "../../images/icons/icon-cart.svg";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({className}) => {
   return (
-    <header>
+    <header className={className}>
       <div className={styles.headerWrapper}>
         <div className={styles.headerLine}></div>
       <img

@@ -5,12 +5,15 @@ import Button from "../Button/Button";
 import ProductNavigation from "../ProductNavigation/ProductNavigation";
 import zx9Img from "../../images/home/mobile/image-speaker-zx9.png";
 import zx9Tablet from "../../images/home/tablet/image-speaker-zx9.png";
+import Header from "../Header/Header";
 
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <main>
+      <div className={styles.topWrapper}>
+      <Header className={styles.homeHeader}/>
         <div className={styles.textContainer}>
           <div className={styles.textChild}>
             <span>new product</span>
@@ -26,11 +29,11 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className={styles.bgContainer}>
+          {/* <div className={styles.bgContainer}>
             <img src={desktopHero}></img>
-          </div>
+          </div> */}
         </div>
-      
+        </div>
 
       <ProductNavigation />
 

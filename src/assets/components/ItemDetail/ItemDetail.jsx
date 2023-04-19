@@ -4,6 +4,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import ProductNavigation from "../ProductNavigation/ProductNavigation.jsx";
 import RelatedProducts from "./RelatedProducts/RelatedProducts";
 import Gallery from "./Gallery/Gallery";
+import Header from '../Header/Header';
+
 
 const ItemDetail = ({ getProductBySlug }) => {
   const navigate = useNavigate();
@@ -37,6 +39,7 @@ const ItemDetail = ({ getProductBySlug }) => {
 
   return (
     <div>
+      <Header />
       <div className={styles.itemDetail}>
         <button type="button" className={styles.backBtn} onClick={handleGoBack}>
           Go back

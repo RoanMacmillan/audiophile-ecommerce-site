@@ -10,6 +10,7 @@ import Earphones from "./assets/components/ProductIndexes/Earphones/Earphones";
 import ScrollToTop from "./assets/components/ScrollToTop/ScrollToTop";
 import headphonesData from '../data.json';
 import ItemDetail from "./assets/components/ItemDetail/ItemDetail";
+// import { useLocation } from 'react-router-dom';
 
 function App() {
 
@@ -17,11 +18,12 @@ function App() {
     return headphonesData.find((product) => product.slug === slug);
   };
 
+
   return (
     <div className="App">
       <BrowserRouter>
       <ScrollToTop />
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/headphones" element={<Headphones />} />
