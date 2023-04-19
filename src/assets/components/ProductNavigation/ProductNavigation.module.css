@@ -18,7 +18,13 @@
 }
 
 .thumbnailHead {
+  /* width: 150px; */
+}
+
+.thumbnailHeadp {
+
   width: 150px;
+  
 }
 
 .thumbnailSpeaker {
@@ -31,6 +37,7 @@
 
 .card img:first-child {
   margin-top: -52px;
+  
 }
 
 .card h4 {
@@ -57,7 +64,6 @@
 }
 
 .card a:hover {
-
   text-decoration: underline;
 }
 
@@ -83,19 +89,70 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .cardContainer {
-
     flex-direction: row;
     justify-content: space-between;
     gap: 10px;
     margin-top: 96px;
     padding-left: 2.4375rem;
     padding-right: 2.5rem;
-    
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .card {
     width: 223px;
   }
-} 
+}
+
+@media screen and (min-width: 1180px) {
+  .cardContainer {
+    margin-top: 12.5rem;
+    gap: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card {
+    width: 350px;
+    height: 204px;
+    position: relative;
+  }
+
+  .card h4 {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 1.28571px;
+    margin-bottom: 15px;
+  }
+
+  .cardTextContainer {
+    bottom: 30px;
+  }
+
+
+  .card img:first-child {
+    margin-top: -75px;
+
+      
+  }
+
+  .thumbnailHeadp {
+
+    width: 220px;
+    
+  }
+
+  .thumbnailSpeaker {
+    width: 225px;
+  }
+  
+  .thumbnailEar {
+    width: 240px;
+    margin-top: -63px !important;
+  }
+
+  
+}

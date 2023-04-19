@@ -102,6 +102,7 @@ footer p:last-of-type {
   display: flex;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
 }
 
 .iconContainer img:hover {
@@ -114,10 +115,28 @@ footer p:last-of-type {
   display: none;
 }
 
+.bestGearDesktop {
+  display: none;
+}
+
+.footerWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
   .bestGearTablet {
     display: unset;
     border-radius: 8px;
+  }
+
+  .footerWrapper {
+    align-items: flex-start;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .bestGear {
@@ -127,6 +146,9 @@ footer p:last-of-type {
   .personContainer {
     padding-left: 39px;
     padding-right: 40px;
+    /* max-width: 1110px; */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .personContainer h3 {
@@ -139,7 +161,6 @@ footer p:last-of-type {
   }
 
   .personContainer p {
-  
     padding-left: 58px;
     padding-right: 58px;
   }
@@ -151,7 +172,6 @@ footer p:last-of-type {
     padding-left: 39px;
     padding-right: 40px;
     height: 400px;
-    
   }
 
   .linksContainer {
@@ -161,14 +181,95 @@ footer p:last-of-type {
 
   footer p {
     text-align: left;
-    heighT: unset;
+    height: unset;
     width: unset;
-    max-width: unset;
+    max-width: 900px;
   }
 
   .bottomRow {
     display: flex;
     justify-content: space-between;
-    widtH: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1184px) {
+  .bestGearTablet {
+    display: none;
+  }
+
+  .bestGearDesktop {
+    display: unset;
+    border-radius: 8px;
+  }
+
+  .personContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1110px;
+    padding: 0;
+    gap: 125px;
+  }
+
+  .personContainer h3 {
+    margin-top: 43px;
+    text-align: left;
+    padding: 0;
+    margin-top: 147px;
+  }
+
+  .personContainer p {
+    text-align: left;
+    padding: 0;
+  }
+
+  .bottomSection {
+    margin-top: 200px;
+  }
+
+  footer {
+    margin-top: 200px;
+    height: 365px;
+  }
+
+  .footerTopRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  footer p {
+    width: 560px;
+  }
+
+  .topP {
+    margin-top: 36px;
+  }
+
+  .bottomP {
+    margin-top: 56px;
+  }
+
+  .iconContainer {
+    /* margin-bottom: 63px; */
+    right: 0;
+    margin-top: auto;
+    position: absolute;
+    top: 205px;
+  }
+
+  .footerWrapper {
+    position: relative;
+  }
+  .footerTopRow {
+    margin-top: 71px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .linksContainer {
+    margin-top: 0;
   }
 }

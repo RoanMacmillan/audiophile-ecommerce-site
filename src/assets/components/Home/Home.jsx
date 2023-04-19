@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 import ProductNavigation from "../ProductNavigation/ProductNavigation";
 import zx9Img from "../../images/home/mobile/image-speaker-zx9.png";
 import zx9Tablet from "../../images/home/tablet/image-speaker-zx9.png";
+import zx9Desktop from '../../images/home/desktop/image-speaker-zx9.png';
 import Header from "../Header/Header";
 
 import { Link } from "react-router-dom";
@@ -27,7 +28,7 @@ const Home = () => {
             <Link to="/headphones/xx99-mark-two-headphones">
               <Button className="btn orange" />
             </Link>
-          </div>
+          </div> 
 
           {/* <div className={styles.bgContainer}>
             <img src={desktopHero}></img>
@@ -36,7 +37,7 @@ const Home = () => {
         </div>
 
       <ProductNavigation />
-
+<div className={styles.cardsWrapper}>
       <div className={styles.orangeCard}>
         <div className={styles.circle}></div>
         <div className={styles.circle}></div>
@@ -49,8 +50,11 @@ const Home = () => {
             src={zx9Tablet}
             alt="zx9 image"
           ></img>
+
+          <img className={styles.zx9Desktop} src={zx9Desktop} alt='zx9 image'></img>
         </div>
 
+        <div className={styles.orangeTextContainer}>
         <h2>
           zx9<br></br> speaker
         </h2>
@@ -62,6 +66,7 @@ const Home = () => {
         <Link to="/speakers/zx9-speaker/">
           <Button className="btn black" />
         </Link>
+      </div>
       </div>
 
       <div className={styles.grayCard}>
@@ -80,6 +85,7 @@ const Home = () => {
             <Button className="btn light" />
           </Link>
         </div>
+      </div>
       </div>
     </main>
   );

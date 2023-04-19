@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ProductNavigation.module.css";
-import headphones from "../../images/thumbnails/thumbnail-head.png";
+import headphones2 from '../../images/thumbnails/default-headphone.png';
 import earphones from "../../images/thumbnails/thumbnail-ear.png";
 import speaker from "../../images/thumbnails/thumbnail-speaker.png";
 import arrow from '../../images/icons/icon-arrow-right.svg'
@@ -10,11 +10,16 @@ const ProductNavigation = () => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.card}>
-        <img
-          className={styles.thumbnailHead}
-          src={headphones}
+
+
+      <img
+          className={styles.thumbnailHeadp}
+          src={headphones2}
           alt="Headphones Thumbnail"
         ></img>
+
+
+        
         <div className={styles.cardTextContainer}>
 
           <h4>headphones</h4>
