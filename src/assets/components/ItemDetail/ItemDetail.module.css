@@ -129,6 +129,38 @@
   display: none;
 }
 
+.addToCartContainer {
+  display: flex;
+  gap: 16px;
+  margin-top: 31px;
+}
+
+.addToCartBtn {
+  background: #d87d4a;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  height: 48px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+
+
+.addToCartBtn:hover {
+  background: #e69364;
+}
+
+
+
 @media screen and (min-width: 680px) {
   .itemDetail {
     padding-left: 24px;

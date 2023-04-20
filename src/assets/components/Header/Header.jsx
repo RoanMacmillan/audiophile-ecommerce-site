@@ -5,9 +5,11 @@ import logo from "../../images/icons/logo.svg";
 import cart from "../../images/icons/icon-cart.svg";
 import { NavLink, useLocation } from "react-router-dom";
 import ProductNavigation from "../ProductNavigation/ProductNavigation";
+import Cart from "../Cart/Cart";
 
 const Header = ({ className }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const location = useLocation();
 
   const toggleMobileMenu = () => {
@@ -26,7 +28,25 @@ const Header = ({ className }) => {
     }
   };
 
-  const isActive = (path) => (location.pathname === path ? styles.activeLink : "");
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+    if (!isCartOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  };
+
+  const closeCart = () => {
+    if (isCartOpen) {
+      setIsCartOpen(false);
+      document.body.style.overflow = "auto";
+
+    }
+  };
+
+  const isActive = (path) =>
+    location.pathname === path ? styles.activeLink : "";
 
   return (
     <header className={className}>
@@ -34,6 +54,11 @@ const Header = ({ className }) => {
         className={styles.overlay}
         style={{ display: isMobileMenuOpen ? "block" : "none" }}
         onClick={closeMobileMenu}
+      ></div>
+      <div
+        className={styles.overlay}
+        style={{ display: isCartOpen ? "block" : "none" }}
+        onClick={closeCart}
       ></div>
       <div className={styles.headerWrapper}>
         <div className={styles.headerLine}></div>
@@ -62,13 +87,25 @@ const Header = ({ className }) => {
             </NavLink>
           </nav>
         </div>
-        <img className={styles.cart} src={cart} alt="Cart"></img>
+        <img
+          className={styles.cart}
+          src={cart}
+          alt="Cart"
+          onClick={toggleCart}
+        ></img>
       </div>
       {isMobileMenuOpen && (
         <div className={styles.mobileMenu}>
           <ProductNavigation />
         </div>
       )}
+
+{isCartOpen && (
+        <div className={styles.cartContainer}>
+          <Cart />
+        </div>
+      )}
+
     </header>
   );
 };

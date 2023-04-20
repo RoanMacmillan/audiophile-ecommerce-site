@@ -47,6 +47,19 @@ header {
   display: none;
 }
 
+.cartContainer {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  top: 90px;
+  left: 0;
+  z-index: 9999;
+  padding-bottom: 68px;
+  padding-left: 24px;
+  padding-right: 24px;
+  
+}
+
 @media screen and (min-width: 768px) {
   .logoA {
     /* margin-right: auto; */
@@ -112,6 +125,7 @@ header {
     text-transform: uppercase;
     color: #ffffff;
     text-decoration: none;
+    transition: all .2s ease;
   }
 
   .desktopNav a:hover {
