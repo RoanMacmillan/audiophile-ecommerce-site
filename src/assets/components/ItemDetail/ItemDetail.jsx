@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "./ItemDetail.module.css";
 import { useParams, useNavigate } from "react-router-dom";
 import ProductNavigation from "../ProductNavigation/ProductNavigation.jsx";
@@ -6,8 +6,10 @@ import RelatedProducts from "./RelatedProducts/RelatedProducts";
 import Gallery from "./Gallery/Gallery";
 import Header from "../Header/Header";
 import Counter from "../Counter/Counter";
+import CartContext from "../CartContext/CartContext";
 
 const ItemDetail = ({ getProductBySlug }) => {
+  const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
 
   const navigate = useNavigate();
@@ -38,16 +40,6 @@ const ItemDetail = ({ getProductBySlug }) => {
 
   // Split the description into paragraphs using '\n\n'
   const featuresParagraphs = features.split("\n\n");
-
-  const incrementQuantity = () => {
-    setQuantity(quantity + 1);
-  };
-
-  const decrementQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
 
   return (
     <div>
@@ -86,24 +78,13 @@ const ItemDetail = ({ getProductBySlug }) => {
             <p className={styles.description}>{description}</p>
             <span className={styles.price}>$ {price}</span>
             <div className={styles.addToCartContainer}>
-            {/* <div className={styles.counter}>
-              <button onClick={decrementQuantity}>-</button>
-              <input
-                type="number"
-                min="1"
-                value={quantity}
-                onChange={(e) => setQuantity(parseInt(e.target.value))}
-              />
-              <button onClick={incrementQuantity}>+</button>
-            </div> */}
-
-            <Counter quantity={quantity} setQuantity={setQuantity}/>
-            <button
-              className={styles.addToCartBtn}
-              onClick={() => addToCart(product, quantity)}
-            >
-              Add to Cart
-            </button>
+              <Counter quantity={quantity} setQuantity={setQuantity} />
+              <button
+                className={styles.addToCartBtn}
+                onClick={() => addToCart(product, quantity)}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>

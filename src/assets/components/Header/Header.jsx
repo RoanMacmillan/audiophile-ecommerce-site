@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "./Header.module.css";
 import hamburger from "../../images/icons/hamburger.svg";
 import logo from "../../images/icons/logo.svg";
@@ -6,8 +6,10 @@ import cart from "../../images/icons/icon-cart.svg";
 import { NavLink, useLocation } from "react-router-dom";
 import ProductNavigation from "../ProductNavigation/ProductNavigation";
 import Cart from "../Cart/Cart";
+import CartContext from "../CartContext/CartContext";
 
 const Header = ({ className }) => {
+  const { cartItems } = useContext(CartContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const location = useLocation();
@@ -101,10 +103,10 @@ const Header = ({ className }) => {
       )}
 
 {isCartOpen && (
-        <div className={styles.cartContainer}>
-          <Cart />
-        </div>
-      )}
+  <div className={styles.cartContainer}>
+    <Cart cartItems={cartItems} />
+  </div>
+)}
 
     </header>
   );

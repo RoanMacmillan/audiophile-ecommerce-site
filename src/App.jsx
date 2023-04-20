@@ -10,6 +10,7 @@ import Earphones from "./assets/components/ProductIndexes/Earphones/Earphones";
 import ScrollToTop from "./assets/components/ScrollToTop/ScrollToTop";
 import headphonesData from "../data.json";
 import ItemDetail from "./assets/components/ItemDetail/ItemDetail";
+import CartContext from "./assets/components/CartContext/CartContext";
 // import { useLocation } from 'react-router-dom';
 
 function App() {
@@ -17,7 +18,31 @@ function App() {
     return headphonesData.find((product) => product.slug === slug);
   };
 
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product, quantity) => {
+    const existingCartItem = cartItems.find((item) => item.id === product.id);
+
+    if (existingCartItem) {
+      const updatedCartItems = cartItems.map((item) =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + quantity }
+          : item
+      );
+      setCartItems(updatedCartItems);
+    } else {
+      setCartItems([...cartItems, { ...product, quantity }]);
+    }
+  };
+
   return (
+
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+      }}
+    >
     <div className="App">
       <BrowserRouter>
         <ScrollToTop />
@@ -44,6 +69,7 @@ function App() {
         <Footer />
       </BrowserRouter>
     </div>
+    </CartContext.Provider>
   );
 }
 
