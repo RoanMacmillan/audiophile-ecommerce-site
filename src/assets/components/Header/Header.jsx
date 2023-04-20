@@ -58,7 +58,7 @@ const Header = ({ className }) => {
         onClick={closeMobileMenu}
       ></div>
       <div
-        className={styles.overlay}
+        className={styles.overlayCart}
         style={{ display: isCartOpen ? "block" : "none" }}
         onClick={closeCart}
       ></div>

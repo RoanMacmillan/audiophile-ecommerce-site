@@ -42,6 +42,17 @@ function App() {
     setCartItems(updatedCartItems);
   };
 
+  const calculateTotalPrice = () => {
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   return (
 
     <CartContext.Provider
@@ -49,6 +60,8 @@ function App() {
         cartItems,
         addToCart,
         updateCartItemQuantity,
+        calculateTotalPrice,
+        clearCart,
       }}
     >
     <div className="App">

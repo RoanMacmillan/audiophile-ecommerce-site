@@ -43,6 +43,16 @@ header {
   z-index: 9998;
 }
 
+.overlayCart {
+  position: fixed;
+  top: 89px; /* Adjust this value according to the header height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+}
+
 .desktopNav {
   display: none;
 }
@@ -57,7 +67,6 @@ header {
   padding-bottom: 68px;
   padding-left: 24px;
   padding-right: 24px;
-  
 }
 
 @media screen and (min-width: 768px) {
@@ -125,11 +134,18 @@ header {
     text-transform: uppercase;
     color: #ffffff;
     text-decoration: none;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
   }
 
   .desktopNav a:hover {
-
     color: #d87d4a;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+
+  .overlay {
+    display: none !important;
   }
 }

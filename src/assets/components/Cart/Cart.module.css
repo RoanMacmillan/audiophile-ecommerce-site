@@ -130,3 +130,24 @@
   mix-blend-mode: normal;
   opacity: 0.5;
 }
+
+.emptyCartMessage {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cartIcon {
+  filter: brightness(0) invert(0);
+  width: 60px;
+}
+
+.emptyCartMessage span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
