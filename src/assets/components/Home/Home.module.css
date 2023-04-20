@@ -215,14 +215,17 @@ main h1 {
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 568px) {
   
 
   .cardsWrapper {
 
-    padding-left: 39px;
-    padding-right: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    
   }
+
+  
 
   .orangeCard {
     height: 720px;
@@ -291,6 +294,7 @@ main h1 {
     width: 50%;
     margin: 0;
     padding-left: 41px;
+    padding-right: 51px;
   }
 
   .lightCard h2 {
@@ -334,6 +338,15 @@ main h1 {
     max-width: 1110px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .cardsWrapper {
+    padding-left: 39px;
+    padding-right: 40px;
   }
 }
 

@@ -29,8 +29,10 @@ html {
 /* min body height */
 
 .App {
-  
+
 }
+
+
 
 body {
   min-height: 100vh;
@@ -71,7 +73,6 @@ video {
   background: #d87d4a;
   color: #ffffff;
   transition: all 0.2s ease;
-  
 }
 
 .orange:hover {
@@ -126,7 +127,6 @@ video {
 }
 
 @media screen and (min-width: 768px) {
-
   .black {
     margin-top: 40px;
   }
@@ -134,5 +134,16 @@ video {
   .indexHeader {
     margin-bottom: 7.5rem;
   }
+}
 
+@media screen and (min-width: 1184px) {
+  .indexHeader {
+    height: 239px;
+  }
+
+  .indexHeader h1 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.42857px;
+  }
 }

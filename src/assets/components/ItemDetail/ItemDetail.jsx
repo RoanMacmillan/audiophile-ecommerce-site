@@ -41,9 +41,11 @@ const ItemDetail = ({ getProductBySlug }) => {
     <div>
       <Header />
       <div className={styles.itemDetail}>
+        <div className={styles.backBtnContainer}>
         <button type="button" className={styles.backBtn} onClick={handleGoBack}>
           Go back
         </button>
+        </div>
 
         <div className={styles.itemContainer}>
           <img
@@ -56,7 +58,7 @@ const ItemDetail = ({ getProductBySlug }) => {
             src={image.tablet}
             alt={`${name} tablet`}
           />
-          {/* <img className={styles.desktopImage} src={image.desktop} alt={`${name} desktop`} /> */}
+          <img className={styles.desktopImage} src={image.desktop} alt={`${name} desktop`} />
 
           <div className={styles.itemContainerChild}>
             {isNew && <span className={styles.newLabel}>New product</span>}
@@ -66,10 +68,13 @@ const ItemDetail = ({ getProductBySlug }) => {
           </div>
         </div>
 
+        <div className={styles.featuresBoxContainer}>
+        <div className={styles.features}>
         <h3>Features</h3>
-        {featuresParagraphs.map((features, index) => (
+        {featuresParagraphs.map((features, index) => ( 
           <p key={index}>{features}</p>
         ))}
+        </div>
         <div className={styles.includedContainer}>
           <h3 className={styles.boxHeading}>In the box</h3>
           <ul className={styles.ul}>
@@ -82,6 +87,7 @@ const ItemDetail = ({ getProductBySlug }) => {
               </li>
             ))}
           </ul>
+        </div>
         </div>
 
         <Gallery gallery={gallery} />

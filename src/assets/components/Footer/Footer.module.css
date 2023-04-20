@@ -126,7 +126,7 @@ footer p:last-of-type {
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 568px) {
   .bestGearTablet {
     display: unset;
     border-radius: 8px;
@@ -144,8 +144,8 @@ footer p:last-of-type {
   }
 
   .personContainer {
-    padding-left: 39px;
-    padding-right: 40px;
+    /* padding-left: 39px;
+    padding-right: 40px; */
     /* max-width: 1110px; */
     margin-left: auto;
     margin-right: auto;
@@ -169,8 +169,8 @@ footer p:last-of-type {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    padding-left: 39px;
-    padding-right: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
     height: 400px;
   }
 
@@ -191,6 +191,18 @@ footer p:last-of-type {
     justify-content: space-between;
     width: 100%;
   }
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+  footer, .personContainer {
+    padding-right: 40px;
+    padding-left: 39px;
+  }
+
+  
 }
 
 @media screen and (min-width: 1184px) {

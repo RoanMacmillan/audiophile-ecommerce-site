@@ -52,10 +52,14 @@
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+.relatedImgDesktop {
+  display: none;
+}
+
+@media screen and (min-width: 670px) {
   .relatedProducts {
-    padding-left: 39px;
-    padding-right: 2.5rem;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .relatedProducts ul {
@@ -75,5 +79,43 @@
     font-size: 32px;
     line-height: 36px;
     letter-spacing: 1.14286px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .relatedProducts {
+    padding-left: 39px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1184px) {
+  .relatedProducts {
+    margin-top: 160px;
+  }
+
+  .relatedProducts h2 {
+
+    margin-bottom: 64px;
+  }
+
+  .relatedImgTablet {
+    display: none;
+  }
+  .relatedImgDesktop {
+    display: unset;
+    width: 350px;
+  }
+  .relatedProducts ul {
+    gap: 30px;
+  }
+
+  .relatedProducts h3 {
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 1.71429px;
+    margin-top: 2.5rem;
+    
   }
 }

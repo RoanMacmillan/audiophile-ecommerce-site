@@ -13,6 +13,9 @@ const RelatedProducts = ({ relatedProducts, category }) => {
             
               <img className={styles.relatedImgMobile} src={product.image.mobile} alt={product.name} />
               <img className={styles.relatedImgTablet} src={product.image.tablet} alt={product.name} />
+              <img className={styles.relatedImgDesktop} src={product.image.desktop} alt={product.name} />
+
+
 
               <h3>{product.name}</h3>
               <Link key={product.slug} to={`/${category}/${product.slug}`}>
