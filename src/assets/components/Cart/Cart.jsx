@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Cart.module.css";
 import Counter from "../Counter/Counter";
+import CartContext from "../CartContext/CartContext";
 
 const Cart = ({ cartItems }) => {
+
+  const { updateCartItemQuantity } = useContext(CartContext);
 
   function shortenProductName(name) {
     const replacements = [
@@ -40,7 +43,12 @@ const Cart = ({ cartItems }) => {
             <span className={styles.productName}>{shortenProductName(item.name)}</span>            
             <span className={styles.productPrice}>$ {item.price}</span>
             </div>
-            <Counter quantity={item.quantity} setQuantity={() => {}} />
+            <Counter
+        quantity={item.quantity}
+        setQuantity={(newQuantity) =>
+          updateCartItemQuantity(item.id, newQuantity)
+        }
+      />
           </div>
         ))}
       </div>

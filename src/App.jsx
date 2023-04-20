@@ -35,12 +35,20 @@ function App() {
     }
   };
 
+  const updateCartItemQuantity = (productId, newQuantity) => {
+    const updatedCartItems = cartItems.map((item) =>
+      item.id === productId ? { ...item, quantity: newQuantity } : item
+    );
+    setCartItems(updatedCartItems);
+  };
+
   return (
 
     <CartContext.Provider
       value={{
         cartItems,
         addToCart,
+        updateCartItemQuantity,
       }}
     >
     <div className="App">
