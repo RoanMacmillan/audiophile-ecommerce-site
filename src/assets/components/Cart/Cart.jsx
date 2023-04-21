@@ -3,12 +3,29 @@ import styles from "./Cart.module.css";
 import Counter from "../Counter/Counter";
 import CartContext from "../CartContext/CartContext";
 import CartImg from '../../images/icons/icon-cart.svg'
+import { useNavigate } from "react-router-dom";
 
 const Cart = ({ cartItems }) => {
+
+  const navigate = useNavigate();
+
+  const enableScrolling = () => {
+    document.body.style.overflow = 'auto';
+  };
+
+  const handleCheckout = () => {
+    enableScrolling();
+    navigate('/checkout')
+  }
+
   const { updateCartItemQuantity, calculateTotalPrice, clearCart } =
     useContext(CartContext);
 
   const totalPrice = calculateTotalPrice();
+
+  const getTotalQuantity = () => {
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
+  };
 
   function shortenProductName(name) {
     const replacements = [
@@ -16,6 +33,7 @@ const Cart = ({ cartItems }) => {
       { search: "Headphones", replace: "" },
       { search: "Speakers", replace: "" },
       { search: "Earphones", replace: "" },
+      { search: "Speaker", replace: "" },
     ];
 
     let shortenedName = name;
@@ -24,6 +42,8 @@ const Cart = ({ cartItems }) => {
       const regex = new RegExp(item.search, "gi");
       shortenedName = shortenedName.replace(regex, item.replace);
     });
+
+   
 
     return shortenedName.toUpperCase();
   }
@@ -40,7 +60,7 @@ const Cart = ({ cartItems }) => {
       ) : (
         <>
       <div className={styles.cartTopRow}>
-        <h2>cart</h2>
+      <h2>cart<span>({getTotalQuantity()})</span></h2>
         <button className={styles.removeBtn} onClick={clearCart}>
           Remove all
         </button>
@@ -66,6 +86,9 @@ const Cart = ({ cartItems }) => {
                   setQuantity={(newQuantity) =>
                     updateCartItemQuantity(item.id, newQuantity)
                   }
+                  containerClassName={styles.cartCounter} // Add custom class name for container
+                  buttonClassName={styles.cartCounterBtn} // Add custom class name for buttons
+                  inputClassName={styles.cartCounterInput} // Add custom class name for input
                 />
               </div>
             ))}
@@ -78,7 +101,7 @@ const Cart = ({ cartItems }) => {
                 ${totalPrice.toFixed(2)}
               </span>
             </div>
-            <button className={styles.checkoutBtn}>checkout</button>
+            <button onClick={handleCheckout} className={styles.checkoutBtn}>checkout</button>
           </div>
         </>
       )}

@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className={styles.bottomSection}>
-      <div className={styles.personContainer}>
+      {/* <div className={styles.personContainer}>
         <img src={bestGear} alt="Person" className={styles.bestGear}></img>
         <img src={bestGearTablet} alt="Person" className={styles.bestGearTablet}></img>
         <img src={bestGearDesktop} alt='Person' className={styles.bestGearDesktop}></img>
@@ -30,7 +30,7 @@ const Footer = () => {
           best place to buy your portable audio equipment.
         </p>
         </div>
-      </div>
+      </div> */}
 
       <footer>
         <div className={styles.footerWrapper}>

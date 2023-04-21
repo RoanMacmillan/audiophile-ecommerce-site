@@ -3,8 +3,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 1.5rem;
+  padding: 0rem 1.5rem;
   /* outline: 1px solid #ffffff27; */
+  height: 90px;
 }
 
 .headerWrapper {
@@ -59,28 +60,60 @@ header {
 
 .cartContainer {
   position: absolute;
-  width: 100%;
+
   background: transparent;
   top: 114px;
-  left: 0;
+  width: 327px;
+  right: 24px;
   z-index: 9999;
-  padding-bottom: 68px;
-  padding-left: 24px;
-  padding-right: 24px;
+  /* padding-bottom: 68px; */
+  /* padding-left: 24px;
+  padding-right: 24px; */
+}
+.cartNotification {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart {
+  transition: all .2s ease;
+}
+
+.cart:hover {
+  filter: invert(34%) sepia(54%) saturate(1547%) hue-rotate(324deg)
+    brightness(72%) contrast(90%);
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
-  .logoA {
-    /* margin-right: auto; */
-    /* margin-left: 42px; */
+  .cartNotification {
+    top: -12px;
+    right: -15px;
+  }
+
+
+
+  .cartContainer {
+    width: 377px;
   }
 
   header {
     padding-left: 39px;
     padding-right: 40px;
-    padding-top: 35px;
-    padding-bottom: 36px;
+    /* padding-top: 36px;
+    padding-bottom: 36px; */
     outline: none;
+    height: 97px;
   }
 
   .headerWrapper {
@@ -104,6 +137,11 @@ header {
 
   .headerWrapper {
     position: relative;
+  }
+
+  .cartContainer {
+    right: 0;
+    top: 85px;
   }
 }
 
@@ -147,5 +185,9 @@ header {
 
   .overlay {
     display: none !important;
+  }
+
+  header {
+    position: relative;
   }
 }

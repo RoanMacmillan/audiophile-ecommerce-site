@@ -2,6 +2,7 @@ import React from "react";
 import ProductItem from "./ProductItem/ProductItem";
 import headphonesData from "../../../../../data.json";
 import ProductNavigation from "../../ProductNavigation/ProductNavigation";
+import PersonContainer from "../../PersonContainer/PersonContainer";
 
 const Product = ({ category }) => {
   return (
@@ -23,6 +24,7 @@ const Product = ({ category }) => {
           />
         ))}
       <ProductNavigation />
+      <PersonContainer />
     </div>
   );
 };

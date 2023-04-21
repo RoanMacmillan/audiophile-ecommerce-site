@@ -51,7 +51,7 @@
   margin-bottom: 17px;
 }
 
-.card a {
+.card span {
   font-weight: 700;
   font-size: 13px;
   line-height: 18px;
@@ -63,7 +63,7 @@
   text-decoration: none;
 }
 
-.card a:hover {
+.card:hover span {
   text-decoration: underline;
 }
 

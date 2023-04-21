@@ -1,0 +1,141 @@
+.checkout {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  margin-top: 65px;
+}
+
+.checkout h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.checkout h2,
+.checkout h3 {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 0.928571px;
+  text-transform: uppercase;
+  color: #d87d4a;
+  margin-top: 2rem;
+}
+
+label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
+  color: #000000;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout input[type='text'],
+.checkout input[type='tel'],
+.checkout input[type='email']
+{
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  height: 56px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 1;
+  padding-left: 24px;
+}
+
+.checkout input::placeholder {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  padding-left: 24px;
+}
+
+.checkout button {
+  border: none;
+}
+
+
+.checkout input[type='radio'] {
+
+  
+}
+
+
+.paymentMethodContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+
+.radioChild {
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  height: 56px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 1;
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+
+}
+
+
+.radioChildChecked {
+  border: 1px solid #d87d4a;
+}
+
+.radioChild input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radioChild::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.radioChild input[type="radio"]:checked + span::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #d87d4a;
+  border-radius: 50%;
+  position: absolute;
+  left: 28px;
+  top: 21px;
+}

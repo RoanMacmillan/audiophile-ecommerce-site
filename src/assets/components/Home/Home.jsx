@@ -7,6 +7,7 @@ import zx9Img from "../../images/home/mobile/image-speaker-zx9.png";
 import zx9Tablet from "../../images/home/tablet/image-speaker-zx9.png";
 import zx9Desktop from '../../images/home/desktop/image-speaker-zx9.png';
 import Header from "../Header/Header";
+import PersonContainer from "../PersonContainer/PersonContainer";
 
 import { Link } from "react-router-dom";
 
@@ -87,6 +88,7 @@ const Home = () => {
         </div>
       </div>
       </div>
+      <PersonContainer />
     </main>
   );
 };

@@ -1,28 +1,30 @@
-.counter input{
-    width: 57px;
-    height: 48px;
-    border: none;
-    background: #F1F1F1;
-    text-align: center;
-    font-family: 'Manrope';
+.counter input {
+  width: 57px;
+  height: 48px;
+  border: none;
+  background: #f1f1f1;
+  text-align: center;
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 13px;
   line-height: 18px;
-  /* identical to box height */
-  
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  
   color: #000000;
-    
-  }
-  
-  .counter button {
-    height: 48px;
-    width: 32px;
-    border: none;
-    background: #F1F1F1;
-  
-  }
+}
+
+
+
+.counter button {
+  height: 48px;
+  width: 32px;
+  border: none;
+  background: #f1f1f1;
+}
+
+.counter button:hover {
+  cursor: pointer;
+  background: #dfdfdf;
+}

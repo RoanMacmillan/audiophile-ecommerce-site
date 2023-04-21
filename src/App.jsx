@@ -11,6 +11,7 @@ import ScrollToTop from "./assets/components/ScrollToTop/ScrollToTop";
 import headphonesData from "../data.json";
 import ItemDetail from "./assets/components/ItemDetail/ItemDetail";
 import CartContext from "./assets/components/CartContext/CartContext";
+import Checkout from "./assets/components/Checkout/Checkout";
 // import { useLocation } from 'react-router-dom';
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
         updateCartItemQuantity,
         calculateTotalPrice,
         clearCart,
+        
       }}
     >
     <div className="App">
@@ -86,6 +88,8 @@ function App() {
             path="/earphones/:slug"
             element={<ItemDetail getProductBySlug={getProductBySlug} />}
           />
+
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>

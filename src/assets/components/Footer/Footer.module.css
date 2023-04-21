@@ -2,14 +2,14 @@
   margin-top: 96px;
 }
 
-.bestGear {
+/* .bestGear {
   border-radius: 8px;
 }
 
 .personContainer {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
+} */
 
 .bottomSection h3 {
   margin-top: 40px;
@@ -22,7 +22,7 @@
   color: #000000;
 }
 
-.personContainer span {
+/* .personContainer span {
   color: rgba(216, 125, 74, 1);
 }
 
@@ -35,7 +35,7 @@
   color: #000000;
   mix-blend-mode: normal;
   opacity: 0.5;
-}
+} */
 
 footer {
   margin-top: 120px;
@@ -111,13 +111,13 @@ footer p:last-of-type {
   cursor: pointer;
 }
 
-.bestGearTablet {
+/* .bestGearTablet {
   display: none;
 }
 
 .bestGearDesktop {
   display: none;
-}
+} */
 
 .footerWrapper {
   width: 100%;
@@ -127,10 +127,10 @@ footer p:last-of-type {
 }
 
 @media screen and (min-width: 568px) {
-  .bestGearTablet {
+  /* .bestGearTablet {
     display: unset;
     border-radius: 8px;
-  }
+  } */
 
   .footerWrapper {
     align-items: flex-start;
@@ -139,19 +139,19 @@ footer p:last-of-type {
     margin-right: auto;
   }
 
-  .bestGear {
+  /* .bestGear {
     display: none;
-  }
+  } */
 
   .personContainer {
     /* padding-left: 39px;
     padding-right: 40px; */
     /* max-width: 1110px; */
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
   }
 
-  .personContainer h3 {
+  /* .personContainer h3 {
     font-size: 40px;
     line-height: 44px;
     letter-spacing: 1.42857px;
@@ -163,7 +163,7 @@ footer p:last-of-type {
   .personContainer p {
     padding-left: 58px;
     padding-right: 58px;
-  }
+  } */
 
   footer {
     align-items: flex-start;
@@ -197,7 +197,7 @@ footer p:last-of-type {
 @media screen and (min-width: 768px) {
 
 
-  footer, .personContainer {
+  footer {
     padding-right: 40px;
     padding-left: 39px;
   }
@@ -206,7 +206,7 @@ footer p:last-of-type {
 }
 
 @media screen and (min-width: 1184px) {
-  .bestGearTablet {
+  /* .bestGearTablet {
     display: none;
   }
 
@@ -233,7 +233,7 @@ footer p:last-of-type {
   .personContainer p {
     text-align: left;
     padding: 0;
-  }
+  } */
 
   .bottomSection {
     margin-top: 200px;

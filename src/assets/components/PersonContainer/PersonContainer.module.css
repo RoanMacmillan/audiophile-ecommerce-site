@@ -1,0 +1,131 @@
+.bestGear {
+    border-radius: 8px;
+  }
+  
+  .personContainer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 120px;
+
+  }
+  
+  .personContainer h3 {
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  
+  .personContainer span {
+    color: rgba(216, 125, 74, 1);
+  }
+  
+  .personContainer p {
+    margin-top: 32px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  .bestGearTablet {
+    display: none;
+  }
+  
+  .bestGearDesktop {
+    display: none;
+  }
+
+
+
+
+  @media screen and (min-width: 568px) {
+    .bestGearTablet {
+      display: unset;
+      border-radius: 8px;
+    }
+  
+    
+  
+    .bestGear {
+      display: none;
+    }
+  
+    .personContainer {
+      /* padding-left: 39px;
+      padding-right: 40px; */
+      /* max-width: 1110px; */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .personContainer h3 {
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: 1.42857px;
+      padding-left: 58px;
+      padding-right: 58px;
+      margin-top: 43px;
+    }
+  
+    .personContainer p {
+      padding-left: 58px;
+      padding-right: 58px;
+    }
+  
+    
+  }
+  
+  
+  @media screen and (min-width: 768px) {
+  
+  
+    .personContainer {
+      padding-right: 40px;
+      padding-left: 39px;
+    }
+  
+    
+  }
+  
+  @media screen and (min-width: 1184px) {
+    .bestGearTablet {
+      display: none;
+    }
+  
+    .bestGearDesktop {
+      display: unset;
+      border-radius: 8px;
+    }
+  
+    .personContainer {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 1110px;
+      padding: 0;
+      gap: 125px;
+      margin-top: 160px;
+    }
+  
+    .personContainer h3 {
+      margin-top: 43px;
+      text-align: left;
+      padding: 0;
+      margin-top: 147px;
+    }
+  
+    .personContainer p {
+      text-align: left;
+      padding: 0;
+    }
+  
+    
+  }
+  

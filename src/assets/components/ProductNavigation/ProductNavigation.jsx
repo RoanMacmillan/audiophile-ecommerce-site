@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 const ProductNavigation = () => {
   return (
     <div className={styles.cardContainer}>
+      <Link to="/headphones">
       <div className={styles.card}>
 
 
@@ -25,13 +26,15 @@ const ProductNavigation = () => {
           <h4>headphones</h4>
           <div className={styles.shopContainer}>
 
-          <Link to="/headphones">shop</Link>
+          <span>shop</span>
           <img src={arrow} alt='Arrow Right'></img>
 
           </div>
         </div>
       </div>
+      </Link>
 
+      <Link to="/speakers">
       <div className={styles.card}>
         <img
           className={styles.thumbnailSpeaker}
@@ -41,12 +44,13 @@ const ProductNavigation = () => {
         <div className={styles.cardTextContainer}>
           <h4>speakers</h4>
           <div className={styles.shopContainer}>
-          <Link to="/speakers">shop</Link>
+          <span>shop</span>
           <img src={arrow} alt='Arrow Right'></img>
           </div>
         </div>
       </div>
-
+      </Link>
+      <Link to="/earphones">
       <div className={styles.card}>
         <img
           className={styles.thumbnailEar}
@@ -58,12 +62,14 @@ const ProductNavigation = () => {
           <h4>earphones</h4>
           <div className={styles.shopContainer}>
 
-          <Link to="/earphones">shop</Link>
+          <span>shop</span>
           <img src={arrow} alt='Arrow Right'></img>
 
           </div>
         </div>
+        
       </div>
+      </Link>
     </div>
   );
 };

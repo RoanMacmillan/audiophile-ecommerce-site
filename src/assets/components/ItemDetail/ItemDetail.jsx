@@ -7,6 +7,7 @@ import Gallery from "./Gallery/Gallery";
 import Header from "../Header/Header";
 import Counter from "../Counter/Counter";
 import CartContext from "../CartContext/CartContext";
+import PersonContainer from "../PersonContainer/PersonContainer";
 
 const ItemDetail = ({ getProductBySlug }) => {
   const { addToCart } = useContext(CartContext);
@@ -78,7 +79,10 @@ const ItemDetail = ({ getProductBySlug }) => {
             <p className={styles.description}>{description}</p>
             <span className={styles.price}>$ {price}</span>
             <div className={styles.addToCartContainer}>
-              <Counter quantity={quantity} setQuantity={setQuantity} />
+            <Counter
+  quantity={quantity}
+  setQuantity={(newQuantity) => setQuantity(newQuantity)}
+/>
               <button
                 className={styles.addToCartBtn}
                 onClick={() => addToCart(product, quantity)}
@@ -116,6 +120,7 @@ const ItemDetail = ({ getProductBySlug }) => {
       <RelatedProducts relatedProducts={others} category={category} />
 
       <ProductNavigation />
+      <PersonContainer />
     </div>
   );
 };

@@ -14,8 +14,14 @@ const Header = ({ className }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const location = useLocation();
 
+
+  const getTotalQuantity = () => {
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
+  };
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsCartOpen(false);
     if (!isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -32,6 +38,7 @@ const Header = ({ className }) => {
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
+    setIsMobileMenuOpen(false);
     if (!isCartOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -63,6 +70,11 @@ const Header = ({ className }) => {
         onClick={closeCart}
       ></div>
       <div className={styles.headerWrapper}>
+      {isCartOpen && (
+  <div className={styles.cartContainer}>
+    <Cart cartItems={cartItems} />
+  </div>
+)}
         <div className={styles.headerLine}></div>
         <img
           className={styles.hamburger}
@@ -95,6 +107,9 @@ const Header = ({ className }) => {
           alt="Cart"
           onClick={toggleCart}
         ></img>
+         {cartItems.length > 0 && (
+          <span className={styles.cartNotification}>{getTotalQuantity()}</span>
+        )}
       </div>
       {isMobileMenuOpen && (
         <div className={styles.mobileMenu}>
@@ -102,11 +117,7 @@ const Header = ({ className }) => {
         </div>
       )}
 
-{isCartOpen && (
-  <div className={styles.cartContainer}>
-    <Cart cartItems={cartItems} />
-  </div>
-)}
+
 
     </header>
   );
