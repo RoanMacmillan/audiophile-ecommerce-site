@@ -1,9 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Checkout.module.css";
 import Header from "../Header/Header";
-import Cart from "../Cart/Cart";
+import CartContext from "../CartContext/CartContext";
 
 const Checkout = ({cartItems}) => {
+
+  const navigate = useNavigate();
+
+
+  const { calculateTotalPrice } = useContext(CartContext);
+
+  const totalPrice = calculateTotalPrice();
+  const shippingCost = 50;
+  const grandTotal = totalPrice + shippingCost;
+
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,6 +37,10 @@ const Checkout = ({cartItems}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+  };
+
+  const handleGoBack = () => {
+    navigate(-1);
   };
 
   function shortenProductName(name) {
@@ -51,6 +67,15 @@ const Checkout = ({cartItems}) => {
   return (
     <div>
       <Header />
+
+      <button
+            type="button"
+            className={styles.backBtn}
+            onClick={handleGoBack}
+          >
+            Go back
+          </button>
+
       <div className={styles.checkout}>
         <h1>Checkout</h1>
         <form onSubmit={handleSubmit}>
@@ -202,6 +227,26 @@ const Checkout = ({cartItems}) => {
               </div>
             ))}
           </div>
+
+          <div className={styles.summaryDetails}>
+          <div className={styles.summaryRow}>
+            <span className={styles.summaryLabel}>Total Cost</span>
+            <span className={styles.result}>${totalPrice.toFixed(2)}</span>
+          </div>
+          <div className={styles.summaryRow}>
+            <span className={styles.summaryLabel}>Shipping</span>
+            <span className={styles.result}>${shippingCost.toFixed(2)}</span>
+          </div>
+          <div className={styles.summaryRow}>
+            <span className={styles.summaryLabel}>VAT (Included)</span>
+            <span className={styles.result}>$ 1,079</span>
+          </div>
+          <div className={`${styles.summaryRow} ${styles.grandTotal}`}>
+            <span className={styles.summaryLabel}>Grand Total</span>
+            <span className={styles.grandResult}>${grandTotal.toFixed(2)}</span>
+          </div>
+        </div>
+
         </div>
 
 
