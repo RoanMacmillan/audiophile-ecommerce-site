@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Checkout.module.css";
 import Header from "../Header/Header";
+import Cart from "../Cart/Cart";
 
-const Checkout = () => {
+const Checkout = ({cartItems}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,6 +13,8 @@ const Checkout = () => {
     city: "",
     country: "",
     paymentMethod: "",
+    eMoneyNumber: '',
+    eMoneyPin: '',
   });
 
   const handleChange = (e) => {
@@ -23,6 +26,27 @@ const Checkout = () => {
     e.preventDefault();
     console.log(formData);
   };
+
+  function shortenProductName(name) {
+    const replacements = [
+      { search: "Mark", replace: "MK" },
+      { search: "Headphones", replace: "" },
+      { search: "Speakers", replace: "" },
+      { search: "Earphones", replace: "" },
+      { search: "Speaker", replace: "" },
+    ];
+
+    let shortenedName = name;
+
+    replacements.forEach((item) => {
+      const regex = new RegExp(item.search, "gi");
+      shortenedName = shortenedName.replace(regex, item.replace);
+    });
+
+   
+
+    return shortenedName.toUpperCase();
+  }
 
   return (
     <div>
@@ -100,11 +124,11 @@ const Checkout = () => {
             <h3>Payment Details</h3>
             <label htmlFor="paymentMethod">Payment Method</label>
             <div className={styles.paymentMethodContainer}>
-              <div
-                className={styles.radioChild}
-                onClick={() =>
-                  setFormData({ ...formData, paymentMethod: "eMoney" })
-                }
+            <div
+                className={`${styles.radioChild} ${
+                  formData.paymentMethod === "eMoney" && styles.radioChildChecked
+                }`}
+                onClick={() => handleChange({ target: { name: "paymentMethod", value: "eMoney" } })}
               >
                 <input
                   type="radio"
@@ -116,10 +140,10 @@ const Checkout = () => {
                 <span>e-Money</span>
               </div>
               <div
-                className={styles.radioChild}
-                onClick={() =>
-                  setFormData({ ...formData, paymentMethod: "cashOnDelivery" })
-                }
+                className={`${styles.radioChild} ${
+                  formData.paymentMethod === "cashOnDelivery" && styles.radioChildChecked
+                }`}
+                onClick={() => handleChange({ target: { name: "paymentMethod", value: "cashOnDelivery" } })}
               >
                 <input
                   type="radio"
@@ -132,6 +156,55 @@ const Checkout = () => {
               </div>
             </div>
           </div>
+
+          {formData.paymentMethod === "eMoney" && (
+            <>
+              <div className={styles.formGroup}>
+                <label htmlFor="eMoneyNumber">e-Money Number</label>
+                <input
+                  type="text"
+                  name="eMoneyNumber"
+                  value={formData.eMoneyNumber}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="eMoneyPin">e-Money PIN</label>
+                <input
+                  type="text"
+                  name="eMoneyPin"
+                  value={formData.eMoneyPin}
+                  onChange={handleChange}
+                />
+              </div>
+            </>
+          )}
+
+<div className={styles.summary}>
+          <h4 className={styles.summaryHeading}>Summary</h4>
+          <div className={styles.cartItems}>
+            {cartItems.map((item) => (
+              <div key={item.id} className={styles.cartItem}>
+                <img
+                  className={styles.cartThumbnail}
+                  src={item.image.desktop}
+                  alt={item.name}
+                />
+                <div className={styles.namePriceContainer}>
+                  <span className={styles.productName}>
+                    {shortenProductName(item.name)}
+                  </span>
+                  <span className={styles.productPrice}>$ {item.price}</span>
+                </div>
+                <div className={styles.quantityContainer}>
+                  <span className={styles.checkoutQuantity}>x{item.quantity}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+
           <button className="btn orange" type="submit">
             continue & pay
           </button>

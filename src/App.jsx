@@ -89,7 +89,7 @@ function App() {
             element={<ItemDetail getProductBySlug={getProductBySlug} />}
           />
 
-          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/checkout' element={<Checkout cartItems={cartItems}/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

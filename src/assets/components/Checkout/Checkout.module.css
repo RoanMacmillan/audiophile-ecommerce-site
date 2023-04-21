@@ -40,10 +40,9 @@ label {
   flex-direction: column;
 }
 
-.checkout input[type='text'],
-.checkout input[type='tel'],
-.checkout input[type='email']
-{
+.checkout input[type="text"],
+.checkout input[type="tel"],
+.checkout input[type="email"] {
   background: #ffffff;
   border: 1px solid #cfcfcf;
   border-radius: 8px;
@@ -71,22 +70,17 @@ label {
 
 .checkout button {
   border: none;
+  width: 100%;
 }
 
-
-.checkout input[type='radio'] {
-
-  
+.checkout input[type="radio"] {
 }
-
 
 .paymentMethodContainer {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
-
 
 .radioChild {
   background: #ffffff;
@@ -105,9 +99,7 @@ label {
   align-items: center;
   gap: 16px;
   position: relative;
-
 }
-
 
 .radioChildChecked {
   border: 1px solid #d87d4a;
@@ -138,4 +130,73 @@ label {
   position: absolute;
   left: 28px;
   top: 21px;
+}
+
+.cartThumbnail {
+  width: 64px;
+  border-radius: 8px;
+}
+
+.cartItems {
+  margin-top: 31px;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  justify-content: space-between;
+}
+
+.namePriceContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: auto;
+}
+
+.productName {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.productPrice {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.checkoutQuantity {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: right;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.quantityContainer {
+  margin-bottom: auto;
+}
+
+.summaryHeading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.summary {
+  margin-top: 95px;
 }
