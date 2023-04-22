@@ -95,6 +95,11 @@ header {
     cursor: pointer;
 }
 
+.mobileMenu {
+  overflow-y: auto;
+  max-height: calc(100vh - 90px); /* adjust this value if you have a different header height */
+}
+
 @media screen and (min-width: 768px) {
   .cartNotification {
     top: -12px;

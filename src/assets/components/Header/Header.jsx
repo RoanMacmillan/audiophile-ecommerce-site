@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styles from "./Header.module.css";
 import hamburger from "../../images/icons/hamburger.svg";
 import logo from "../../images/icons/logo.svg";
@@ -22,12 +22,26 @@ const Header = ({ className }) => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     setIsCartOpen(false);
-    if (!isMobileMenuOpen) {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "auto";
+    }
+  };
+  
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+    setIsMobileMenuOpen(false);
+    if (isCartOpen) {
+      document.body.style.overflow = "auto";
+    }
+  };
+  
+  useEffect(() => {
+    if (isMobileMenuOpen || isCartOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-  };
+  }, [isMobileMenuOpen, isCartOpen]);
 
   const closeMobileMenu = () => {
     if (isMobileMenuOpen) {
@@ -36,15 +50,7 @@ const Header = ({ className }) => {
     }
   };
 
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
-    setIsMobileMenuOpen(false);
-    if (!isCartOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  };
+  
 
   const closeCart = () => {
     if (isCartOpen) {
