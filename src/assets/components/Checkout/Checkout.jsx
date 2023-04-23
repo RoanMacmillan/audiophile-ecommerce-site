@@ -65,9 +65,9 @@ const Checkout = ({cartItems}) => {
   }
 
   return (
-    <div>
+    <div className={styles.checkoutPage}>
       <Header />
-
+    <div className={styles.checkoutBackBtnContainer}>
       <button
             type="button"
             className={styles.backBtn}
@@ -75,10 +75,13 @@ const Checkout = ({cartItems}) => {
           >
             Go back
           </button>
-
+          </div>
       <div className={styles.checkout}>
-        <h1>Checkout</h1>
         <form onSubmit={handleSubmit}>
+          <div className={styles.desktopCheckoutContainer}>
+          <h1>Checkout</h1>
+
+          <div className={styles.formTopRow}>
           <div className={styles.formGroup}>
             <h2>billing details</h2>
             <label htmlFor="name">Name</label>
@@ -89,8 +92,8 @@ const Checkout = ({cartItems}) => {
               onChange={handleChange}
             />
           </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="email">Email Address</label>
+          <div className={`${styles.formGroup} ${styles.formGroupCustom2}`}>            
+          <label htmlFor="email">Email Address</label>
             <input
               type="email"
               name="email"
@@ -98,7 +101,8 @@ const Checkout = ({cartItems}) => {
               onChange={handleChange}
             />
           </div>
-          <div className={styles.formGroup}>
+          </div>
+          <div className={`${styles.formGroup} ${styles.formGroupCustom3}`}>            
             <label htmlFor="phoneNumber">Phone Number</label>
             <input
               type="tel"
@@ -108,7 +112,7 @@ const Checkout = ({cartItems}) => {
             />
           </div>
           <div className={styles.formGroup}>
-            <h3>billing details</h3>
+            <h3>Shipping info</h3>
 
             <label htmlFor="address">Your Address</label>
             <input
@@ -118,6 +122,8 @@ const Checkout = ({cartItems}) => {
               onChange={handleChange}
             />
           </div>
+          <div className={styles.formTopRow}>
+
           <div className={styles.formGroup}>
             <label htmlFor="zip">ZIP Code</label>
             <input
@@ -136,7 +142,8 @@ const Checkout = ({cartItems}) => {
               onChange={handleChange}
             />
           </div>
-          <div className={styles.formGroup}>
+          </div>
+          <div className={`${styles.formGroup} ${styles.formGroupCustom3}`}>            
             <label htmlFor="country">Country</label>
             <input
               type="text"
@@ -147,7 +154,7 @@ const Checkout = ({cartItems}) => {
           </div>
           <div className={styles.formGroup}>
             <h3>Payment Details</h3>
-            <label htmlFor="paymentMethod">Payment Method</label>
+            <label className={styles.eMoneyLabel} htmlFor="paymentMethod">Payment Method</label>
             <div className={styles.paymentMethodContainer}>
             <div
                 className={`${styles.radioChild} ${
@@ -184,6 +191,7 @@ const Checkout = ({cartItems}) => {
 
           {formData.paymentMethod === "eMoney" && (
             <>
+            <div className={styles.eMoneyContainer}>
               <div className={styles.formGroup}>
                 <label htmlFor="eMoneyNumber">e-Money Number</label>
                 <input
@@ -202,8 +210,11 @@ const Checkout = ({cartItems}) => {
                   onChange={handleChange}
                 />
               </div>
+              </div>
             </>
           )}
+
+          </div>
 
 <div className={styles.summary}>
           <h4 className={styles.summaryHeading}>Summary</h4>
@@ -246,13 +257,13 @@ const Checkout = ({cartItems}) => {
             <span className={styles.grandResult}>${grandTotal.toFixed(2)}</span>
           </div>
         </div>
-
+        <button className="btn orange" type="submit">
+            continue & pay
+          </button>
         </div>
 
 
-          <button className="btn orange" type="submit">
-            continue & pay
-          </button>
+          
         </form>
       </div>
     </div>

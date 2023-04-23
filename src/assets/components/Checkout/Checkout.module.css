@@ -267,3 +267,108 @@ label {
   opacity: 1;
   cursor: pointer;
 }
+
+@media screen and (min-width: 768px) {
+  .formTopRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .formTopRow .formGroup {
+    width: 100%;
+  }
+
+  .formGroupCustom2 {
+    margin-top: auto;
+  }
+
+  .paymentMethodContainer .radioChild {
+    width: 49.5%;
+  }
+
+  .formGroupCustom3 {
+    width: 49.5%;
+  }
+
+  .eMoneyContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .eMoneyContainer .formGroup {
+    width: 100%;
+  }
+
+  .radioChild {
+    margin-left: auto;
+  }
+
+  .eMoneyLabel {
+    margin-bottom: -17px;
+  }
+}
+
+@media screen and (min-width: 1184px) {
+  .checkout {
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .checkoutBackBtnContainer {
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .backBtn {
+    padding: 0;
+  }
+
+  
+}
+
+
+@media screen and (min-width: 1440px) {
+
+  .checkout {
+    
+  }
+
+
+  form .desktopCheckoutContainer,
+  form .summary {
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .desktopCheckoutContainer {
+    width: 730px;
+    background: white;
+    border-radius: 8px;
+    padding: 48px;
+
+  }
+
+  .summary {
+    width: 350px;
+    margin-bottom: auto;
+    margin-top: 0;
+    padding: 33px;
+    background: white;
+    border-radius: 8px;
+  }
+
+  .checkoutPage {
+    background: #F1F1F1;
+    
+  }
+  
+}
