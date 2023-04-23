@@ -268,6 +268,10 @@ label {
   cursor: pointer;
 }
 
+.checkoutPage {
+  background: white;
+}
+
 @media screen and (min-width: 768px) {
   .formTopRow {
     display: flex;
@@ -284,11 +288,11 @@ label {
   }
 
   .paymentMethodContainer .radioChild {
-    width: 49.5%;
+    width: 49%;
   }
 
   .formGroupCustom3 {
-    width: 49.5%;
+    width: 49%;
   }
 
   .eMoneyContainer {
@@ -333,7 +337,7 @@ label {
 }
 
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1184px) {
 
   .checkout {
     

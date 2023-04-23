@@ -1,10 +1,38 @@
-import React, { useState, useContext} from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Checkout.module.css";
 import Header from "../Header/Header";
 import CartContext from "../CartContext/CartContext";
 
 const Checkout = ({cartItems}) => {
+
+  useEffect(() => {
+    // Save the current body background color
+    const originalBodyBackgroundColor = document.body.style.backgroundColor;
+  
+    const updateBackgroundColor = () => {
+      // Check if the screen width is below 1440px
+      if (window.matchMedia("(max-width: 1183px)").matches) {
+        // Set the body background color to white for screen sizes below 1440px
+        document.body.style.backgroundColor = "white";
+      } else {
+        // Set the desired background color for larger screen sizes
+        document.body.style.backgroundColor = "#F2F2F2";
+      }
+    };
+  
+    // Call the updateBackgroundColor function to set the initial background color
+    updateBackgroundColor();
+
+    // Add an event listener to update the background color when the window is resized
+    window.addEventListener("resize", updateBackgroundColor);
+  
+    // Revert back to the original background color and remove the event listener when the component unmounts
+    return () => {
+      document.body.style.backgroundColor = originalBodyBackgroundColor;
+      window.removeEventListener("resize", updateBackgroundColor);
+    };
+  }, []);
 
   const navigate = useNavigate();
 
