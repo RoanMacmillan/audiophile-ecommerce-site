@@ -3,10 +3,16 @@ import styles from "./PersonContainer.module.css";
 import bestGear from "../../images/shared/mobile/image-best-gear.jpg";
 import bestGearTablet from "../../images/shared/tablet/image-best-gear.jpg";
 import bestGearDesktop from '../../images/shared/desktop/image-best-gear.jpg';
+import useIntersectionObserver from "../useIntersectionObserver/useIntersectionObserver";
 
 const PersonContainer = () => {
+
+  const [personContainerRef, personContainerVisible] = useIntersectionObserver();
+
   return (
-    <div className={styles.personContainer}>
+    // <div className={styles.personContainer}>
+          <div ref={personContainerRef} className={`${styles.personContainer} ${personContainerVisible ? styles.fadeInLoad : styles.hidden}`}>
+
       <img src={bestGear} alt="Person" className={styles.bestGear}></img>
       <img src={bestGearTablet} alt="Person" className={styles.bestGearTablet}></img>
       <img src={bestGearDesktop} alt='Person' className={styles.bestGearDesktop}></img>

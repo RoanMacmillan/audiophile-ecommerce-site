@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Home.module.css";
-import desktopHero from "../../images/home/desktop/image-hero.jpg";
 import Button from "../Button/Button";
 import ProductNavigation from "../ProductNavigation/ProductNavigation";
 import zx9Img from "../../images/home/mobile/image-speaker-zx9.png";
@@ -8,10 +7,15 @@ import zx9Tablet from "../../images/home/tablet/image-speaker-zx9.png";
 import zx9Desktop from '../../images/home/desktop/image-speaker-zx9.png';
 import Header from "../Header/Header";
 import PersonContainer from "../PersonContainer/PersonContainer";
+import useIntersectionObserver from "../useIntersectionObserver/useIntersectionObserver";
+
 
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [orangeCardRef, orangeCardVisible] = useIntersectionObserver();
+  const [grayCardRef, grayCardVisible] = useIntersectionObserver();
+  const [earCardRef, earCardVisible] = useIntersectionObserver();
   return (
     <main>
       <div className={styles.topWrapper}>
@@ -39,7 +43,7 @@ const Home = () => {
 
       <ProductNavigation />
 <div className={styles.cardsWrapper}>
-      <div className={styles.orangeCard}>
+<div ref={orangeCardRef} className={`${styles.orangeCard} ${orangeCardVisible ? styles.fadeInLoad : styles.hidden}`}>
         
 
         <div className={styles.orangeImgWrapper}>
@@ -68,14 +72,14 @@ const Home = () => {
       </div>
       </div>
 
-      <div className={styles.grayCard}>
+      <div ref={grayCardRef} className={`${styles.grayCard} ${grayCardVisible ? styles.fadeInLoad : styles.hidden}`}>
         <h2>zx7 speaker</h2>
         <Link to="/speakers/zx7-speaker/">
           <Button className="btn light" />
         </Link>
       </div>
 
-      <div className={styles.earphoneContainer}>
+      <div ref={earCardRef} className={`${styles.earphoneContainer} ${earCardVisible ? styles.fadeInLoad : styles.hidden}`}>
         <div className={styles.darkCard}></div>
 
         <div className={styles.lightCard}>

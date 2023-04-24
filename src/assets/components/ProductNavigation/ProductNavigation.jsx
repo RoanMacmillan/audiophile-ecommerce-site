@@ -5,10 +5,15 @@ import earphones from "../../images/thumbnails/thumbnail-ear.png";
 import speaker from "../../images/thumbnails/thumbnail-speaker.png";
 import arrow from '../../images/icons/icon-arrow-right.svg'
 import { Link } from 'react-router-dom';
+import useIntersectionObserver from "../useIntersectionObserver/useIntersectionObserver";
 
 const ProductNavigation = () => {
+
+  const [cardContainerRef, cardContainerVisible] = useIntersectionObserver();
+
   return (
-    <div className={styles.cardContainer}>
+          <div ref={cardContainerRef} className={`${styles.cardContainer} ${cardContainerVisible ? styles.fadeInLoad : styles.hidden}`}>
+
       <Link to="/headphones">
       <div className={styles.card}>
 

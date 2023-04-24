@@ -91,6 +91,21 @@
   flex-direction: column;
 }
 
+.fadeInLoad {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cardContainer a {
+  z-index: unset;
+}
+
 @media screen and (min-width: 568px) {
   .cardContainer {
     
@@ -129,6 +144,7 @@
     gap: 30px;
     /* padding-left: 0;
     padding-right: 0; */
+    
   }
 
   .card {
@@ -162,16 +178,31 @@
 
     width: 215px;
     margin-top: -80px !important;
-    
+    transition: all .7s ease;
+  }
+
+  .card:hover .thumbnailHeadp {
+    margin-top: -88px !important;
+  }
+
+  .card:hover .thumbnailEar {
+    margin-top: -71px !important;
+  }
+
+  .card:hover .thumbnailSpeaker {
+    margin-top: -81px;
   }
 
   .thumbnailSpeaker {
     width: 220px;
+    transition: all .7s ease;
   }
   
   .thumbnailEar {
     width: 225px;
     margin-top: -63px !important;
+    transition: all .7s ease;
+
   }
 
   

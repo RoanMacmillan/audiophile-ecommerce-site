@@ -8,8 +8,12 @@ import Header from "../Header/Header";
 import Counter from "../Counter/Counter";
 import CartContext from "../CartContext/CartContext";
 import PersonContainer from "../PersonContainer/PersonContainer";
+import useIntersectionObserver from "../useIntersectionObserver/useIntersectionObserver";
 
 const ItemDetail = ({ getProductBySlug }) => {
+
+  const [itemContainerRef, itemContainerVisible] = useIntersectionObserver();
+
   const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
 
@@ -46,6 +50,7 @@ const ItemDetail = ({ getProductBySlug }) => {
     <div>
       <Header />
       <div className={styles.itemDetail}>
+        
         <div className={styles.backBtnContainer}>
           <button
             type="button"
@@ -56,7 +61,9 @@ const ItemDetail = ({ getProductBySlug }) => {
           </button>
         </div>
 
-        <div className={styles.itemContainer}>
+        {/* <div className={styles.itemContainer}> */}
+        <div ref={itemContainerRef} className={`${styles.itemContainer} ${itemContainerVisible ? styles.fadeInLoad : styles.hidden}`}>
+
           <img
             className={styles.mobileImage}
             src={image.mobile}

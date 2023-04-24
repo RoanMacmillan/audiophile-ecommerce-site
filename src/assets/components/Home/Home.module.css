@@ -218,6 +218,17 @@ main h1 {
   align-items: center;
 }
 
+.fadeInLoad {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 @media screen and (min-width: 568px) {
   .cardsWrapper {
     padding-left: 24px;
@@ -357,17 +368,54 @@ main h1 {
     z-index: unset;
     height: 346px;
     margin-top: 128px;
-
     background: transparent;
+    animation: fadeIn 2.5s ease-in-out;
+    animation-delay: .9s;
+    animation-fill-mode: backwards;
+  }
+
+
+  
+
+  
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .topWrapper {
+    /* background-image: url("../../images/home/desktop/image-hero.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background-color: #191919;
+    height: 729px;
+    position: relative;
+    z-index: 1;
+    
+  }
+
+  .topWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url("../../images/home/desktop/image-hero.jpg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #191919;
-    height: 729px;
+    animation: fadeIn 2.5s ease-in-out;
+    animation-delay: .3s;
+    animation-fill-mode: backwards;
+    background-color: transparent;
+    z-index: -2;
   }
 
   .textContainer h1,

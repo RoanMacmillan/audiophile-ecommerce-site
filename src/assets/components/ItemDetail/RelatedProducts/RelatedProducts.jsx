@@ -2,10 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './RelatedProducts.module.css';
 import Button from '../../Button/Button';
+import useIntersectionObserver from '../../useIntersectionObserver/useIntersectionObserver';
 
 const RelatedProducts = ({ relatedProducts, category }) => {
+
+  const [relatedProductsRef, relatedProductsVisible] = useIntersectionObserver();
+
   return (
-    <div className={styles.relatedProducts}>
+      <div
+      ref={relatedProductsRef}
+      className={`${styles.relatedProducts} ${
+        relatedProductsVisible ? styles.fadeInLoad : styles.hidden
+      }`}
+    >
       <h2>You may also like</h2>
       <ul>
         {relatedProducts.map((product) => (
