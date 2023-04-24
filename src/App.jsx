@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./assets/components/Header/Header";
 import Home from "./assets/components/Home/Home";
 import Footer from "./assets/components/Footer/Footer";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
@@ -19,11 +18,18 @@ function App() {
     return headphonesData.find((product) => product.slug === slug);
   };
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const storedCartItems = localStorage.getItem("cart");
+    return storedCartItems ? JSON.parse(storedCartItems) : [];
+  });
+
+  const syncLocalStorage = (newCartItems) => {
+    localStorage.setItem("cart", JSON.stringify(newCartItems));
+  };
 
   const addToCart = (product, quantity) => {
     const existingCartItem = cartItems.find((item) => item.id === product.id);
-
+  
     if (existingCartItem) {
       const updatedCartItems = cartItems.map((item) =>
         item.id === product.id
@@ -31,8 +37,11 @@ function App() {
           : item
       );
       setCartItems(updatedCartItems);
+      syncLocalStorage(updatedCartItems);
     } else {
-      setCartItems([...cartItems, { ...product, quantity }]);
+      const newCartItems = [...cartItems, { ...product, quantity }];
+      setCartItems(newCartItems);
+      syncLocalStorage(newCartItems);
     }
   };
 
@@ -41,6 +50,7 @@ function App() {
       item.id === productId ? { ...item, quantity: newQuantity } : item
     );
     setCartItems(updatedCartItems);
+    syncLocalStorage(updatedCartItems);
   };
 
   const calculateTotalPrice = () => {
@@ -52,6 +62,7 @@ function App() {
 
   const clearCart = () => {
     setCartItems([]);
+    syncLocalStorage([]);
   };
 
   return (
@@ -69,7 +80,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <ScrollToTop />
-        {/* <Header /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/headphones" element={<Headphones />} />
