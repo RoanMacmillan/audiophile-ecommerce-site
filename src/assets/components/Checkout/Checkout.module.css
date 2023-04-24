@@ -291,6 +291,8 @@ label {
   width: 90%;
   max-width: 540px;
   text-align: left;
+  overflow-y: auto;
+  max-height: 100vh; /* Set the maximum height of the modal */
 }
 
 .productContainer {

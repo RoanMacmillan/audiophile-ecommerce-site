@@ -23,7 +23,7 @@ const Header = ({ className }) => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     setIsCartOpen(false);
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto"; 
     }
   };
   
