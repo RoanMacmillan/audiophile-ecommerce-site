@@ -1,5 +1,5 @@
 .bottomSection {
-  margin-top: 96px;
+  /* margin-top: 96px; */
 }
 
 /* .bestGear {
@@ -236,7 +236,7 @@ footer p:last-of-type {
   } */
 
   .bottomSection {
-    margin-top: 200px;
+    margin-top: auto;
   }
 
   footer {

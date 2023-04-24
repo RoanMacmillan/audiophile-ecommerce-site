@@ -23,7 +23,7 @@ const ProductNavigation = () => {
         
         <div className={styles.cardTextContainer}>
 
-          <h4>headphones</h4>
+          <h1>headphones</h1> 
           <div className={styles.shopContainer}>
 
           <span>shop</span>
@@ -42,7 +42,7 @@ const ProductNavigation = () => {
           alt="Headphones Thumbnail"
         ></img>
         <div className={styles.cardTextContainer}>
-          <h4>speakers</h4>
+          <h2>speakers</h2>
           <div className={styles.shopContainer}>
           <span>shop</span>
           <img src={arrow} alt='Arrow Right'></img>
@@ -59,7 +59,7 @@ const ProductNavigation = () => {
         ></img>
         <div className={styles.cardTextContainer}>
 
-          <h4>earphones</h4>
+          <h3>earphones</h3>
           <div className={styles.shopContainer}>
 
           <span>shop</span>
