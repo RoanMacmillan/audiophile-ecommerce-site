@@ -320,7 +320,8 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 24px;
+  
 }
 
 .productDetails {
@@ -357,6 +358,7 @@ label {
   border-radius: 0 0 8px 8px;
   background: black;
   padding: 15px 0 15px 24px;
+  
 }
 
 .totalContainer strong {
@@ -466,6 +468,8 @@ line-height: 36px;
     padding-bottom: 15px;
     padding-left: 15px;
     
+    
+    
   }
 
   .totalContainer {
@@ -476,11 +480,14 @@ line-height: 36px;
     justify-content: flex-end;
     align-items: flex-start;
     border-radius: 0 8px 8px 0;
+    padding: 0;
     
   }
 
   .totalContainer p {
-    margin-bottom: 26px;
+    /* margin-bottom: 26px; */
+    padding: 16px;
+    
   }
 
   .checkoutModal {
@@ -499,6 +506,7 @@ line-height: 36px;
  .rowWrapper {
 
   display: flex;
+
   
  }
 

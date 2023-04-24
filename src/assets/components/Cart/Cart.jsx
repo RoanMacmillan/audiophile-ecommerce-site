@@ -2,21 +2,20 @@ import React, { useContext } from "react";
 import styles from "./Cart.module.css";
 import Counter from "../Counter/Counter";
 import CartContext from "../CartContext/CartContext";
-import CartImg from '../../images/icons/icon-cart.svg'
+import CartImg from "../../images/icons/icon-cart.svg";
 import { useNavigate } from "react-router-dom";
 
 const Cart = ({ cartItems }) => {
-
   const navigate = useNavigate();
 
   const enableScrolling = () => {
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   };
 
   const handleCheckout = () => {
     enableScrolling();
-    navigate('/checkout')
-  }
+    navigate("/checkout");
+  };
 
   const { updateCartItemQuantity, calculateTotalPrice, clearCart } =
     useContext(CartContext);
@@ -34,6 +33,7 @@ const Cart = ({ cartItems }) => {
       { search: "Speakers", replace: "" },
       { search: "Earphones", replace: "" },
       { search: "Speaker", replace: "" },
+      { search: "Wireless", replace: "wls" },
     ];
 
     let shortenedName = name;
@@ -43,30 +43,27 @@ const Cart = ({ cartItems }) => {
       shortenedName = shortenedName.replace(regex, item.replace);
     });
 
-   
-
     return shortenedName.toUpperCase();
   }
 
   return (
     <div className={styles.cart}>
       {cartItems.length === 0 ? (
-        
         <div className={styles.emptyCartMessage}>
-          <img src={CartImg} className={styles.cartIcon} alt='Cart Icon'></img>
+          <img src={CartImg} className={styles.cartIcon} alt="Cart Icon"></img>
           <span>Your cart is empty!</span>
-          
-          </div>
+        </div>
       ) : (
         <>
-      <div className={styles.cartTopRow}>
-      <h2>cart<span>({getTotalQuantity()})</span></h2>
-        <button className={styles.removeBtn} onClick={clearCart}>
-          Remove all
-        </button>
-      </div>
+          <div className={styles.cartTopRow}>
+            <h2>
+              cart<span>({getTotalQuantity()})</span>
+            </h2>
+            <button className={styles.removeBtn} onClick={clearCart}>
+              Remove all
+            </button>
+          </div>
 
-      
           <div className={styles.cartItems}>
             {cartItems.map((item) => (
               <div key={item.id} className={styles.cartItem}>
@@ -101,7 +98,9 @@ const Cart = ({ cartItems }) => {
                 ${totalPrice.toFixed(2)}
               </span>
             </div>
-            <button onClick={handleCheckout} className={styles.checkoutBtn}>checkout</button>
+            <button onClick={handleCheckout} className={styles.checkoutBtn}>
+              checkout
+            </button>
           </div>
         </>
       )}
