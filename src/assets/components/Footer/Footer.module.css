@@ -206,35 +206,7 @@ footer p:last-of-type {
 }
 
 @media screen and (min-width: 1184px) {
-  /* .bestGearTablet {
-    display: none;
-  }
-
-  .bestGearDesktop {
-    display: unset;
-    border-radius: 8px;
-  }
-
-  .personContainer {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 1110px;
-    padding: 0;
-    gap: 125px;
-  }
-
-  .personContainer h3 {
-    margin-top: 43px;
-    text-align: left;
-    padding: 0;
-    margin-top: 147px;
-  }
-
-  .personContainer p {
-    text-align: left;
-    padding: 0;
-  } */
-
+ 
   .bottomSection {
     margin-top: auto;
   }
@@ -251,7 +223,8 @@ footer p:last-of-type {
   }
 
   footer p {
-    width: 560px;
+    width: 571px;
+   
   }
 
   .topP {
