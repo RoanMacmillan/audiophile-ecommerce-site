@@ -199,7 +199,10 @@ header {
     position: relative;
   }
 
-  .cart {
+  .headerWrapper {
     margin-bottom: auto;
+    margin-top: 32px;
   }
+
+  
 }
