@@ -409,9 +409,11 @@ main h1 {
     width: 377px;
     height: 447px;
     margin-top: auto;
+    margin-bottom: -3px;
     margin-right: auto;
     margin-left: 140px;
     z-index: 999999999;
+    
   }
 
   .orangeImgWrapper img {
@@ -451,5 +453,15 @@ main h1 {
 
   .earphoneContainer {
     gap: 30px;
+  }
+
+  .orangeTextContainer {
+    outline: 1px solid red;
+    margin-top: auto;
+    margin-bottom: 124px;
+  }
+
+  .orangeTextContainer h2 {
+    margin-top: 0;
   }
 }
