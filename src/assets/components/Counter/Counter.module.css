@@ -15,6 +15,15 @@
   color: #000000;
 }
 
+.counter input[type="number"]::-webkit-inner-spin-button,
+.counter input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.counter input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 
 .counter button {
