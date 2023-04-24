@@ -89,6 +89,9 @@ main h1 {
   margin-top: 120px;
   position: relative;
   overflow: hidden;
+  background-image: url("../../images/home/desktop/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center -275px;
 }
 
 .orangeCard h2 {
@@ -216,16 +219,10 @@ main h1 {
 }
 
 @media screen and (min-width: 568px) {
-  
-
   .cardsWrapper {
-
     padding-left: 24px;
     padding-right: 24px;
-    
   }
-
-  
 
   .orangeCard {
     height: 720px;
@@ -233,7 +230,8 @@ main h1 {
     max-width: 1110px;
     margin-left: auto;
     margin-right: auto;
-    
+
+    background-position: center -300px;
   }
 
   .orangeCard h2 {
@@ -341,9 +339,7 @@ main h1 {
   }
 }
 
-
 @media screen and (min-width: 768px) {
-
   .cardsWrapper {
     padding-left: 39px;
     padding-right: 40px;
@@ -395,6 +391,9 @@ main h1 {
     flex-direction: row;
     justify-content: center;
     margin-bottom: 3rem;
+    background-size: unset;
+    background-position-x: -145px;
+    background-position-y: -55px;
   }
 
   .zx9Desktop {
@@ -413,13 +412,12 @@ main h1 {
     margin-right: auto;
     margin-left: 140px;
     z-index: 999999999;
-    
   }
 
   .orangeImgWrapper img {
     object-position: top;
   }
-  
+
   .orangeTextContainer {
     align-items: flex-start;
     margin-right: 95px;
@@ -440,15 +438,15 @@ main h1 {
   }
 
   .darkCard {
-    width: 50%;
+    width: 540px;
     height: 320px;
     background-image: url("../../images/home/desktop/image-earphones-yx1.jpg");
     margin: 0;
   }
 
   .lightCard {
-    
     padding-left: 95px;
+    width: 540px;
   }
 
   .earphoneContainer {
@@ -456,7 +454,6 @@ main h1 {
   }
 
   .orangeTextContainer {
-    outline: 1px solid red;
     margin-top: auto;
     margin-bottom: 124px;
   }

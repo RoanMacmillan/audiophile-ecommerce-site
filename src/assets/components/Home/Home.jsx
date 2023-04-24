@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <main>
       <div className={styles.topWrapper}>
-      <Header className={styles.homeHeader}/>
+      <Header className={styles.homeHeader}/> 
         <div className={styles.textContainer}>
           <div className={styles.textChild}>
             <span>new product</span>
@@ -40,9 +40,7 @@ const Home = () => {
       <ProductNavigation />
 <div className={styles.cardsWrapper}>
       <div className={styles.orangeCard}>
-        <div className={styles.circle}></div>
-        <div className={styles.circle}></div>
-        <div className={styles.circle}></div>
+        
 
         <div className={styles.orangeImgWrapper}>
           <img className={styles.zx9Mobile} src={zx9Img} alt="zx9 image"></img>

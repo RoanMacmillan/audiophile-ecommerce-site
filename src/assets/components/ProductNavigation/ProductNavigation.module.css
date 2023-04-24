@@ -17,13 +17,13 @@
   padding-right: 1.5rem;
 }
 
-.thumbnailHead {
-  /* width: 150px; */
-}
+
 
 .thumbnailHeadp {
 
   width: 150px;
+  
+
   
 }
 
@@ -37,6 +37,7 @@
 
 .card img:first-child {
   margin-top: -52px;
+  
   
 }
 
@@ -160,6 +161,7 @@
   .thumbnailHeadp {
 
     width: 220px;
+    margin-top: -80px !important;
     
   }
 
@@ -168,7 +170,7 @@
   }
   
   .thumbnailEar {
-    width: 240px;
+    width: 225px;
     margin-top: -63px !important;
   }
 
