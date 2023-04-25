@@ -4,8 +4,12 @@ import Counter from "../Counter/Counter";
 import CartContext from "../CartContext/CartContext";
 import CartImg from "../../images/icons/icon-cart.svg";
 import { useNavigate } from "react-router-dom";
+import useIntersectionObserver from "../useIntersectionObserver/useIntersectionObserver";
 
 const Cart = ({ cartItems }) => {
+
+  const [cartRef, cartVisible] = useIntersectionObserver();
+
   const navigate = useNavigate();
 
   const enableScrolling = () => {
@@ -47,7 +51,9 @@ const Cart = ({ cartItems }) => {
   }
 
   return (
-    <div className={styles.cart}>
+    // <div className={styles.cart}>
+      <div ref={cartRef} className={`${styles.cart} ${cartVisible ? styles.fadeInLoad : styles.hidden}`}>
+
       {cartItems.length === 0 ? (
         <div className={styles.emptyCartMessage}>
           <img src={CartImg} className={styles.cartIcon} alt="Cart Icon"></img>

@@ -9,6 +9,7 @@ import Cart from "../Cart/Cart";
 import CartContext from "../CartContext/CartContext";
 
 const Header = ({ className }) => {
+
   const { cartItems } = useContext(CartContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
