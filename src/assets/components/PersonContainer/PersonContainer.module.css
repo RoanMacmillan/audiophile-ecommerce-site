@@ -43,7 +43,7 @@
     display: none;
   }
 
-  .fadeInLoad {
+  /* .fadeInLoad {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
@@ -52,7 +52,7 @@
   .hidden {
     opacity: 0;
     visibility: hidden;
-  }
+  } */
 
 
 
