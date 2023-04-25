@@ -1,61 +1,20 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import useFormValidation from "./useFormValidation/useFormValidation";
 import styles from "./Checkout.module.css";
 import Header from "../Header/Header";
 import CartContext from "../CartContext/CartContext";
 import OrangeTick from "../../images/checkout/icon-order-confirmation.svg";
+import useBodyStyles from "./useBodyStyles/useBodyStyles";
 
 const Checkout = () => {
-
   const { cartItems } = useContext(CartContext);
 
   const [showModal, setShowModal] = useState(false);
 
-
-  useEffect(() => {
-  // Save the current body background color and body overflow property
-  const originalBodyBackgroundColor = document.body.style.backgroundColor;
-  const originalBodyOverflow = document.body.style.overflow;
-
-  const updateBackgroundColor = () => {
-    // Check if the screen width is below 1440px
-    if (window.matchMedia("(max-width: 1183px)").matches) {
-      // Set the body background color to white for screen sizes below 1440px
-      document.body.style.backgroundColor = "white";
-    } else {
-      // Set the desired background color for larger screen sizes
-      document.body.style.backgroundColor = "#F2F2F2";
-    }
-  };
-
-  const updateOverflow = () => {
-    // Set body overflow to "hidden" when showModal is true, otherwise set it to the original value
-    document.body.style.overflow = showModal ? "hidden" : originalBodyOverflow;
-  };
-
-  // Call the updateBackgroundColor and updateOverflow functions to set the initial background color and overflow
-  updateBackgroundColor();
-  updateOverflow();
-
-  // Add an event listener to update the background color when the window is resized
-  window.addEventListener("resize", updateBackgroundColor);
-
-  // Return cleanup function
-  return () => {
-    // Revert back to the original background color and overflow property when the component unmounts
-    document.body.style.backgroundColor = originalBodyBackgroundColor;
-    document.body.style.overflow = originalBodyOverflow;
-
-    // Remove the event listener when the component unmounts
-    window.removeEventListener("resize", updateBackgroundColor);
-  };
-}, [showModal]); // Add showModal as a dependency
-
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  // enables scrolling on checkout modal on small screen sizes
+  // fixes backgroundcolor issue
+  useBodyStyles(showModal);
 
   const handleSuccessfulSubmission = () => {
     setShowModal(true);
@@ -71,10 +30,9 @@ const Checkout = () => {
 
   const navigate = useNavigate();
 
-  const { calculateTotalPrice } = useContext(CartContext);
-
   const { clearCart } = useContext(CartContext);
 
+  const { calculateTotalPrice } = useContext(CartContext);
   const totalPrice = calculateTotalPrice();
   const shippingCost = 50;
   const grandTotal = totalPrice + shippingCost;
@@ -136,79 +94,7 @@ const Checkout = () => {
   }
 
   // form validation
-
-  const [formErrors, setFormErrors] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    address: "",
-    zip: "",
-    city: "",
-    country: "",
-    paymentMethod: "",
-    eMoneyNumber: "",
-    eMoneyPin: "",
-  });
-
-  const validateForm = () => {
-    let errors = {};
-
-    if (!formData.name.trim()) {
-      errors.name = "Name is required.";
-    }
-
-    if (!formData.email.trim()) {
-      errors.email = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = "Email is not valid.";
-    }
-
-    if (!formData.phoneNumber.trim()) {
-      errors.phoneNumber = "Phone number is required.";
-    }
-
-    if (!formData.address.trim()) {
-      errors.address = "Address is required.";
-    }
-
-    if (!formData.zip.trim()) {
-      errors.zip = "ZIP code is required.";
-    }
-
-    if (!formData.city.trim()) {
-      errors.city = "City is required.";
-    }
-
-    if (!formData.country.trim()) {
-      errors.country = "Country is required.";
-    }
-
-    if (!formData.paymentMethod.trim()) {
-      errors.paymentMethod = "Payment method is required.";
-    }
-
-    if (formData.paymentMethod === "eMoney") {
-      if (
-        !formData.eMoneyNumber.trim() ||
-        formData.eMoneyNumber.trim().length !== 10 ||
-        !/^\d+$/.test(formData.eMoneyNumber.trim())
-      ) {
-        errors.eMoneyNumber =
-          "e-Money number is required and must be 10 digits.";
-      }
-
-      if (
-        !formData.eMoneyPin.trim() ||
-        formData.eMoneyPin.trim().length !== 4 ||
-        !/^\d+$/.test(formData.eMoneyPin.trim())
-      ) {
-        errors.eMoneyPin = "e-Money PIN is required and must be 4 digits.";
-      }
-    }
-
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
+  const { formErrors, validateForm } = useFormValidation(formData);
 
   return (
     <div className={styles.checkoutPage}>
@@ -449,7 +335,11 @@ const Checkout = () => {
                 </span>
               </div>
             </div>
-            <button className="btn orange" type="submit" disabled={cartItems.length === 0}>
+            <button
+              className="btn orange"
+              type="submit"
+              disabled={cartItems.length === 0}
+            >
               continue & pay
             </button>
           </div>
