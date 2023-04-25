@@ -6,7 +6,9 @@ import Header from "../Header/Header";
 import CartContext from "../CartContext/CartContext";
 import OrangeTick from "../../images/checkout/icon-order-confirmation.svg";
 
-const Checkout = ({ cartItems }) => {
+const Checkout = () => {
+
+  const { cartItems } = useContext(CartContext);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -447,7 +449,7 @@ const Checkout = ({ cartItems }) => {
                 </span>
               </div>
             </div>
-            <button className="btn orange" type="submit">
+            <button className="btn orange" type="submit" disabled={cartItems.length === 0}>
               continue & pay
             </button>
           </div>

@@ -118,7 +118,7 @@ const Header = ({ className }) => {
         )}
       </div>
       {isMobileMenuOpen && (
-        <div className={styles.mobileMenu}>
+        <div className={styles.mobileMenu}> 
           <ProductNavigation />
         </div>
       )}

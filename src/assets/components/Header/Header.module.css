@@ -46,7 +46,7 @@ header {
 
 .overlayCart {
   position: fixed;
-  top: 95px; /* Adjust this value according to the header height */
+  top: 90px; /* Adjust this value according to the header height */
   left: 0;
   right: 0;
   bottom: 0;

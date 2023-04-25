@@ -82,6 +82,11 @@ video {
   background: #e69364;
 }
 
+.btn.orange:disabled {
+
+  cursor: not-allowed;
+  background-color: #e694645b;
+}
 
 
 .black {

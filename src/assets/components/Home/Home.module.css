@@ -370,7 +370,7 @@ main h1 {
     margin-top: 128px;
     background: transparent;
     animation: fadeIn 2.5s ease-in-out;
-    animation-delay: .9s;
+    animation-delay: .7s;
     animation-fill-mode: backwards;
   }
 
@@ -389,10 +389,7 @@ main h1 {
   }
 
   .topWrapper {
-    /* background-image: url("../../images/home/desktop/image-hero.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; */
+    
     background-color: #191919;
     height: 729px;
     position: relative;
@@ -412,7 +409,7 @@ main h1 {
     background-position: center;
     background-repeat: no-repeat;
     animation: fadeIn 2.5s ease-in-out;
-    animation-delay: .3s;
+    animation-delay: .2s;
     animation-fill-mode: backwards;
     background-color: transparent;
     z-index: -2;
